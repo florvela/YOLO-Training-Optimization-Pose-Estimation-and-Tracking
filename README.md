@@ -1,1 +1,37 @@
-# gun-detection
+# YOLOv5, YOLOv7, and YOLOv8 Model Training and Optimization
+
+This repository contains the code for training YOLOv5, YOLOv7, and YOLOv8 models for object detection using Python 3. These models are widely used for real-time object detection tasks due to their accuracy and efficiency. The models are trained on a custom Roboflow dataset. The project is currently in development, and welcome to contributions and collaborations.
+
+## Training
+
+## Optimization
+
+### OpenVINO
+
+To optimize the trained YOLO models using OpenVINO, follow these steps:
+Convert the trained models to OpenVINO Intermediate Representation (IR) format:
+
+```shell
+python optimize_openvino.py --model yolov5
+```
+
+The optimized models will be saved in the OpenVINO IR format for deployment.
+
+### Apache TVM
+
+To test the optimization of the trained models using Apache TVM, follow these steps:
+
+Install the Apache TVM framework on your machine. Refer to the official Apache TVM documentation for detailed instructions.
+Use the TVM compiler to optimize the trained models.
+
+```shell
+python optimize_tvm.py --model yolov5
+```
+
+## Real-Time Tracking
+
+The object tracking implementation in this project utilizes GStreamer.
+
+## Contact
+
+For any inquiries, suggestions, or collaborations related to this project, please feel free to reach out to flor.p.vela@gmail.com. I value your feedback and would be glad to assist you with any questions you may have.
