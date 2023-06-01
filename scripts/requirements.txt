@@ -32,7 +32,7 @@ ipython>=7.16.3
 
 # others
 numpy>=1.21.0
-opencv-python
+# opencv-python
 Pillow>=8.3.2
 matplotlib>=3.4,<3.5.3
 scipy
