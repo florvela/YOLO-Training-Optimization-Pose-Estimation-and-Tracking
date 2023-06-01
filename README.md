@@ -7,7 +7,7 @@ This repository contains the code for training YOLOv5, YOLOv7, and YOLOv8 models
 Build OpenCV 4 from source with Gstreamer:
 
 ```shell
-./tests/tracking/gstreamer_tests/install_gstreamer.sh
+./scripts/install_gstreamer.sh
 ```
 
 ## Training
