@@ -6,7 +6,7 @@ sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev &&
 
 conda create -n gstreamer_cv2 conda activate gstreamer_cv2 &&
 
-pip install numpy &&
+pip install numpy==1.24.3 &&
 
 cd ~ &&
 
