@@ -3,12 +3,10 @@
 ################### install openvino ###################
 
 # Step 1: Create a virtual environment for the notebooks
-echo "Creating virtual environment for notebooks"
-python3 -m venv .venv
-
-# Step 2: Activate the virtual environment
-echo "Activating virtual environment"
-source .venv/bin/activate
+# Step 5: Create a Conda environment for GStreamer
+echo "Creating Conda environment for GStreamer"
+conda create -n test
+conda activate test
 
 # Step 3: Install OpenVINO and dependencies
 echo "Installing OpenVINO and dependencies"
@@ -21,6 +19,9 @@ pip install -r requirements.txt
 
 # Step 4: Install GStreamer and dependencies
 echo "Installing GStreamer and dependencies"
+sudo apt update
+sudo apt install build-essential
+sudo apt-get install manpages-dev
 sudo apt-get install gstreamer1.0*
 sudo apt install ubuntu-restricted-extras
 sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev

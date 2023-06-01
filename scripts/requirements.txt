@@ -42,6 +42,3 @@ scipy
 # compatibility issues or vulnerabilities
 scikit-image>=0.19.2
 setuptools>=56.0.0
-
-
-gcc==12.1.0
