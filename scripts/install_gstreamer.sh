@@ -1,24 +1,26 @@
-sudo apt-get install gstreamer1.0*
+sudo apt-get install gstreamer1.0* &&
 
-&& sudo apt install ubuntu-restricted-extras
+sudo apt install ubuntu-restricted-extras &&
 
-&& sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev &&
 
-&& conda create -n gstreamer_cv2 && conda activate gstreamer_cv2
+conda create -n gstreamer_cv2 conda activate gstreamer_cv2 &&
 
-&& pip install numpy
+pip install numpy &&
 
-&& git clone https://github.com/opencv/opencv.git
+cd ~ &&
 
-&& cd opencv/
+git clone https://github.com/opencv/opencv.git &&
 
-&& git checkout 4.1.0
+cd opencv/ &&
 
-&& mkdir build
+git checkout 4.1.0 &&
 
-&& cd build
+mkdir build &&
 
-&& cmake -D CMAKE_BUILD_TYPE=RELEASE \
+cd build &&
+
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D INSTALL_PYTHON_EXAMPLES=ON \
 -D INSTALL_C_EXAMPLES=OFF \
 -D PYTHON_EXECUTABLE=$(which python3) \
@@ -28,12 +30,12 @@ sudo apt-get install gstreamer1.0*
 -D PYTHON3_INCLUDE_DIR=$(python3 -c "from distutils.sysconfig import get_python_inc; print(get_python_inc())") \
 -D PYTHON3_PACKAGES_PATH=$(python3 -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())") \
 -D WITH_GSTREAMER=ON \
--D BUILD_EXAMPLES=ON ..
+-D BUILD_EXAMPLES=ON .. &&
 
-&& sudo make -j$(nproc)
+sudo make -j$(nproc) &&
 
-&& sudo make install
+sudo make install &&
 
-&& sudo ldconfig
+sudo ldconfig &&
 
-&& conda install -c conda-forge gcc=12.1.0
+echo "import cv2 and print cv2.getBuildInformation. If it does not work, run: conda install -c conda-forge gcc=12.1.0"
