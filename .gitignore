@@ -133,5 +133,7 @@ dmypy.json
 # dataset
 data/guns_dataset
 
+*/notebooks/002-yolov7-optimization/yolov7/
+
 # weights
 *.pt
