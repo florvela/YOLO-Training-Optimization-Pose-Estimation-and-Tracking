@@ -12,12 +12,37 @@ Build OpenCV 4 from source with Gstreamer:
 
 ## Training
 
+1) Use the following notebooks in Google Colaboratory to train YOLO models using GPU:
+
+    * [Training YOLO v5 on a custom dataset from Roboflow](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/001%20-%20Training%20models/yolov5/train_yolov5.ipynb)
+    * [Training YOLO v7 on a custom dataset from Roboflow](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/001%20-%20Training%20models/yolov7/train_yolov7.ipynb)
+    * [Training YOLO v8 on a custom dataset from Roboflow](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/001%20-%20Training%20models/yolov8/train_yolov8.ipynb)
+
+2) Make sure you save the wights of the trained models
+
 ## Optimization
 
 ### OpenVINO
 
 To optimize the trained YOLO models using OpenVINO, follow these steps:
-Convert the trained models to OpenVINO Intermediate Representation (IR) format.
+
+1) Setup
+> **_NOTE:_**: Requirements.txt is in the [scripts folder](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/tree/main/scripts)
+```
+# Step 1: Create a virtual environment for the notebooks
+echo "Creating virtual environment for notebooks"
+&& python3 -m venv .venv
+
+# Step 2: Activate the virtual environment
+&& echo "Activating virtual environment"
+&& source .venv/bin/activate
+
+# sudo apt install python3-pip
+&& pip install --upgrade pip
+&& pip install --no-deps openvino openvino-dev nncf
+&& pip install -r requirements.txt
+```
+2) Convert the trained models to OpenVINO Intermediate Representation (IR) format.
 
 ### Apache TVM
 
