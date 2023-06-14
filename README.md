@@ -42,7 +42,8 @@ echo "Creating virtual environment for notebooks"
 && pip install --no-deps openvino openvino-dev nncf
 && pip install -r requirements.txt
 ```
-2) Convert the trained models to OpenVINO Intermediate Representation (IR) format.
+2) Make sure it is working properly... Try the [Hello World notebook](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/002%20-%20Optimization%20with%20OpenVINO/notebooks/001-hello-world/001-hello-world.ipynb)
+3) Convert the trained models to OpenVINO Intermediate Representation (IR) format.
 
 ### Apache TVM
 
