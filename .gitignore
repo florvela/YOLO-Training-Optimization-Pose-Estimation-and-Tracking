@@ -137,3 +137,13 @@ data/guns_dataset
 
 # weights
 *.pt
+
+# openvino
+*/notebooks/003-yolov8-optimization/datasets/
+*/notebooks/003-yolov8-optimization/yolov8n-seg.onnx
+*/notebooks/003-yolov8-optimization/yolov8n-seg_openvino_model/
+*/notebooks/003-yolov8-optimization/yolov8n.onnx
+*/notebooks/003-yolov8-optimization/yolov8n_openvino_int8_model/
+*/notebooks/003-yolov8-optimization/yolov8n_openvino_model/
+scripts/.openvino_venv/
+
