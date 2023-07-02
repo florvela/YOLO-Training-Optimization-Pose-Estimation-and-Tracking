@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*__pycache__/
 
 .idea/
 
@@ -132,6 +133,8 @@ dmypy.json
 
 # dataset
 data/guns_dataset
+datasets
+config.py
 
 */notebooks/002-yolov7-optimization/yolov7/
 
