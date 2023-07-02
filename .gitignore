@@ -146,4 +146,4 @@ data/guns_dataset
 */notebooks/003-yolov8-optimization/yolov8n_openvino_int8_model/
 */notebooks/003-yolov8-optimization/yolov8n_openvino_model/
 scripts/.openvino_venv/
-
+*ByteTrack/
