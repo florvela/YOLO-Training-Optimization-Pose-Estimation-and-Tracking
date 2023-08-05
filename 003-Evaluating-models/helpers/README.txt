@@ -1,0 +1,1 @@
+Script para cambiar los labels para probar con el dataset V2 porque el V2 tenia solo armas y el V1 tenia armas y cuchillos.
