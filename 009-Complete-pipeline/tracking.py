@@ -13,6 +13,8 @@ from supervision.notebook.utils import show_frame_in_notebook
 from supervision.tools.detections import Detections, BoxAnnotator
 import pdb
 import torch
+import math
+import cv2
 
 import os
 HOME = os.getcwd()
@@ -89,6 +91,32 @@ def match_detections_with_tracks(
 
     return tracker_ids
 
+def euclidean_distance(point1, point2):
+    # return np.sqrt(np.sum((point1 - point2) ** 2))
+    return math.sqrt( ((point1[0]-point2[0])**2)+((point1[1]-point2[1])**2) )
+
+def find_closest_keypoint(keypoints, bounding_box):
+    # Convert bounding box to [x, y] format
+    # pdb.set_trace()
+    box_x = (bounding_box[0] + bounding_box[2]) / 2
+    box_y = (bounding_box[1] + bounding_box[3]) / 2
+    box_points = [box_x, box_y]
+
+    min_distance = float('inf')
+    closest_index = -1
+
+    d = []
+
+    for i, keypoints_pair in enumerate(keypoints):
+        for point in keypoints_pair.view(-1, 2).numpy():
+            distance = euclidean_distance(point, box_points)
+            d.append(distance)
+            if distance < min_distance:
+                min_distance = distance
+                closest_index = i
+
+    return closest_index
+
 
 gun_model = YOLO(os.path.join(HOME,'weights/guns.pt'))
 model = YOLO(os.path.join(HOME,'weights/yolov8n-pose.pt'))
@@ -131,6 +159,7 @@ flag = False
 
 track_true = set()
 
+
 # open target video file
 with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
     # loop over video frames
@@ -159,12 +188,6 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
             not_touching_indexes = []
 
 
-        if len(results[0]):
-            # coordenadas x,y de las munecas son 10 y 9
-            result_hand_keypoints = results[0].keypoints.xyn[0][[9,10]].cpu().numpy()
-            # pdb.set_trace()
-
-
         detections = Detections(
             xyxy=results[0].boxes.xyxy.cpu().numpy(),
             confidence=results[0].boxes.conf.cpu().numpy(),
@@ -184,31 +207,24 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
         tracker_id = match_detections_with_tracks(detections=detections, tracks=tracks)
         detections.tracker_id = np.array(tracker_id)
 
+        keep_track = list()
+        if len(gun_results[0]) and len(results[0]):
+            # coordenadas x,y de las munecas son 10 y 9
+            result_hand_keypoints = [sub_array[[9,10]] for sub_array in results[0].keypoints.xy]
+
+            for bounding_box in gun_results[0].boxes.xyxy:
+                keep_track.append(find_closest_keypoint(result_hand_keypoints, bounding_box))
+
         try:
             if len(detections.tracker_id):
-                for tracker_id in detections.tracker_id[touching_indexes]:
+                for tracker_id in detections.tracker_id[keep_track]:
                     track_true.add(tracker_id)
         except:
             pdb.set_trace()
 
-        # print(track_true)
-
-        # filtering out detections without trackers
-        # mask = np.array([tracker_id is not None for tracker_id in detections.tracker_id], dtype=bool)
         mask = np.array([tracker_id is not None and tracker_id in track_true for tracker_id in detections.tracker_id], dtype=bool)
         detections.filter(mask=mask, inplace=True)
 
-        # pdb.set_trace()
-
-        # ##let's say to only track the third person:
-        # if follow_det == -1 and detections.tracker_id:
-        #     follow_det = detections.tracker_id[0]
-        # mask = np.array([int(tracker_id) == follow_det for tracker_id in detections.tracker_id], dtype=bool)
-        # detections.filter(mask=mask, inplace=True)
-
-        # format custom labels
-
-        # f"#{tracker_id} {CLASS_NAMES_DICT[class_id]} {confidence:0.2f}"
         labels = [
             f"#{tracker_id} {confidence:0.2f}"
             for _, confidence, class_id, tracker_id
@@ -232,11 +248,3 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
         frame = box_annotator.annotate(frame=frame, detections=detections2, labels=labels)
 
         sink.write_frame(frame)
-
-        # print(detections.xyxy)
-
-        # # pdb.set_trace()
-        # if counter ==100:
-        #     sys.exit(0)
-        # else:
-        #   counter += 1
