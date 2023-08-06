@@ -140,6 +140,7 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
 
         # model prediction on single frame and conversion to supervision Detections
         results = model(frame, conf=0.7)
+        frame = results[0].plot(boxes=False)
 
         ################ Cambiar esto para ver si lo agarracon la mano y no solo si el arma esta cerca de la persona
         touching_indexes = []
@@ -156,6 +157,12 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
         else:
             touching_indexes = []
             not_touching_indexes = []
+
+
+        if len(results[0]):
+            # coordenadas x,y de las munecas son 10 y 9
+            result_hand_keypoints = results[0].keypoints.xyn[0][[9,10]].cpu().numpy()
+            # pdb.set_trace()
 
 
         detections = Detections(
@@ -228,7 +235,7 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
 
         # print(detections.xyxy)
 
-        # pdb.set_trace()
+        # # pdb.set_trace()
         # if counter ==100:
         #     sys.exit(0)
         # else:
