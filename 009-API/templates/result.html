@@ -7,8 +7,8 @@
     <h1>Gun Detection - Result</h1>
     <h2>Original Video: {{ video_name }}</h2>
     <video width="640" height="480" controls>
-        <source src="{{ processed_video_path }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+	    <source src="{{ url_for('serve_video', filename=video_name) }}" type="video/mp4">
+	    Your browser does not support the video tag.
+	</video>
 </body>
 </html>

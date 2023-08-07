@@ -3,9 +3,14 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 import cv2
 import numpy as np
+from flask import send_from_directory
+from tracking import process_video_with_detection
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'static/uploads'
+UPLOAD_FOLDER = os.path.join(app.root_path, 'static', 'uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+RESULTS_FOLDER = os.path.join(app.root_path, 'static', 'results')
+app.config['RESULTS_FOLDER'] = RESULTS_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = {'mp4', 'avi', 'mkv'}  # Define allowed video formats
 
 
@@ -41,14 +46,20 @@ def upload_video():
 
 def process_video(video_path):
     # TODO: Implement video processing code from the previous section
+    process_video_with_detection(video_path)
 
     # For now, just return the original video path as a placeholder
     return video_path
 
 
+@app.route('/static/results/<path:filename>')
+def serve_video(filename):
+    return send_from_directory(app.config['RESULTS_FOLDER'], filename)
+
+
 @app.route('/result/<video_name>')
 def show_result(video_name):
-    processed_video_path = os.path.join(app.config['UPLOAD_FOLDER'], video_name)
+    processed_video_path = os.path.join(app.config['RESULTS_FOLDER'], video_name)
 
     return render_template('result.html', video_name=video_name, processed_video_path=processed_video_path)
 
