@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gun Detection - Upload Video</title>
+    <title>Gun Detection</title>
 </head>
 <body>
-    <h1>Gun Detection - Upload Video</h1>
+    <h1>Gun Detection</h1>
+
+    <!-- Form to upload a video -->
+    <h2>Upload Video</h2>
     <form action="{{ url_for('upload_video') }}" method="post" enctype="multipart/form-data">
         <input type="file" name="video" accept=".mp4, .avi, .mkv">
         <label for="method">Choose a method:</label>
@@ -13,6 +16,17 @@
             <option value="touching-boxes">Track person with the bounding boxes near detected guns</option>
         </select>
         <input type="submit" value="Upload Video">
+    </form>
+
+    <!-- Form to stream from the webcam -->
+    <h2>Stream Webcam</h2>
+    <form action="{{ url_for('upload_video') }}" method="post">
+        <label for="method">Choose a method:</label>
+        <select id="method" name="method">
+            <option value="nearby-hand">Track person with the closest wrist to detected guns</option>
+            <option value="touching-boxes">Track person with the bounding boxes near detected guns</option>
+        </select>
+        <input type="submit" value="Stream Webcam">
     </form>
 </body>
 </html>
