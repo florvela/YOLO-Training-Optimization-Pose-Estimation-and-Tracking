@@ -16,9 +16,8 @@ import torch
 import argparse
 import os
 import sys
-HOME = os.getcwd()
-print(HOME)
-sys.path.append(f"{HOME}/ByteTrack")
+
+sys.path.append(f"{os.getcwd()}/ByteTrack")
 from yolox.tracker.byte_tracker import BYTETracker, STrack
 
 def parse_arguments():
@@ -43,14 +42,34 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 # Generate the source and target video paths using the provided filename
-SOURCE_VIDEO_PATH = os.path.join(HOME, video_path)
+SOURCE_VIDEO_PATH = os.path.join(os.getcwd(), video_path)
 TARGET_VIDEO_PATH = os.path.join(output_directory, f"result-{method}-{video_filename}")
-# SOURCE_VIDEO_PATH = f"{HOME}/video1.mp4"
-# TARGET_VIDEO_PATH = f"{HOME}/video1-result.mp4"
-
-# Now you can use SOURCE_VIDEO_PATH and TARGET_VIDEO_PATH in your script
 print(f"Source video path: {SOURCE_VIDEO_PATH}")
 print(f"Target video path: {TARGET_VIDEO_PATH}")
+
+gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns.pt'))
+gun_model.fuse()
+
+model = YOLO(os.path.join(os.getcwd(),'weights/yolov8n-pose.pt'))
+model.fuse()
+
+
+# class_ids of interest - car, motorcycle, bus and truck
+POSE_INTEREST_IDS = [0] # 0 para personas
+
+# create BYTETracker instance
+byte_tracker = BYTETracker(BYTETrackerArgs())
+# create VideoInfo instance
+video_info = VideoInfo.from_video_path(SOURCE_VIDEO_PATH)
+# create frame generator
+generator = get_video_frames_generator(SOURCE_VIDEO_PATH)
+# create instance of BoxAnnotator and LineCounterAnnotator
+box_annotator = BoxAnnotator(color=ColorPalette(), thickness=2, text_thickness=1, text_scale=0.5)
+
+
+follow_det = -1
+flag = False
+track_true = set()
 
 
 @dataclass(frozen=True)
@@ -80,7 +99,7 @@ def tracks2boxes(tracks: List[STrack]) -> np.ndarray:
     ], dtype=float)
 
 
-# matches our bounding boxes with predictions
+# matches bounding boxes with predictions
 def match_detections_with_tracks(
     detections: Detections,
     tracks: List[STrack]
@@ -100,13 +119,13 @@ def match_detections_with_tracks(
 
     return tracker_ids
 
+
 def euclidean_distance(point1, point2):
     return np.sqrt(np.sum((point1 - point2) ** 2))
-    # return math.sqrt( ((point1[0]-point2[0])**2)+((point1[1]-point2[1])**2) )
+
 
 def find_closest_keypoint(keypoints, bounding_box):
     # Convert bounding box to [x, y] format
-    # pdb.set_trace()
     box_x = (bounding_box[0] + bounding_box[2]) / 2
     box_y = (bounding_box[1] + bounding_box[3]) / 2
     box_points = [box_x, box_y]
@@ -114,17 +133,15 @@ def find_closest_keypoint(keypoints, bounding_box):
     min_distance = float('inf')
     closest_index = -1
 
-    d = []
-
     for i, keypoints_pair in enumerate(keypoints):
         for point in keypoints_pair.view(-1, 2).numpy():
             distance = euclidean_distance(point, box_points)
-            d.append(distance)
             if distance < min_distance:
                 min_distance = distance
                 closest_index = i
 
     return closest_index
+
 
 def are_boxes_touching(box1, box2):
     x_min1, y_min1, x_max1, y_max1 = box1
@@ -140,30 +157,6 @@ def are_boxes_touching(box1, box2):
 
     # If there's an overlap in both x-axis and y-axis, the boxes are touching
     return True
-
-
-gun_model = YOLO(os.path.join(HOME,'weights/guns.pt'))
-gun_model.fuse()
-
-model = YOLO(os.path.join(HOME,'weights/yolov8n-pose.pt'))
-model.fuse()
-
-# class_ids of interest - car, motorcycle, bus and truck
-POSE_INTEREST_IDS = [0] # 0 para personas
-
-# create BYTETracker instance
-byte_tracker = BYTETracker(BYTETrackerArgs())
-# create VideoInfo instance
-video_info = VideoInfo.from_video_path(SOURCE_VIDEO_PATH)
-# create frame generator
-generator = get_video_frames_generator(SOURCE_VIDEO_PATH)
-# create instance of BoxAnnotator and LineCounterAnnotator
-box_annotator = BoxAnnotator(color=ColorPalette(), thickness=2, text_thickness=1, text_scale=0.5)
-
-
-follow_det = -1
-flag = False
-track_true = set()
 
 
 # open target video file
@@ -205,12 +198,9 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
                 for bounding_box in gun_results[0].boxes.xyxy:
                     keep_track.append(find_closest_keypoint(result_hand_keypoints, bounding_box))
 
-            try:
-                if len(detections.tracker_id):
-                    for tracker_id in detections.tracker_id[keep_track]:
-                        track_true.add(tracker_id)
-            except:
-                pdb.set_trace()
+            if len(detections.tracker_id):
+                for tracker_id in detections.tracker_id[keep_track]:
+                    track_true.add(tracker_id)
 
             mask = np.array([tracker_id is not None and tracker_id in track_true for tracker_id in detections.tracker_id], dtype=bool)
             detections.filter(mask=mask, inplace=True)
@@ -281,12 +271,9 @@ with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
             tracker_id = match_detections_with_tracks(detections=detections, tracks=tracks)
             detections.tracker_id = np.array(tracker_id)
 
-            try:
-                if len(detections.tracker_id):
-                    for tracker_id in detections.tracker_id[touching_indexes]:
-                        track_true.add(tracker_id)
-            except:
-                pdb.set_trace()
+            if len(detections.tracker_id):
+                for tracker_id in detections.tracker_id[touching_indexes]:
+                    track_true.add(tracker_id)
 
             mask = np.array([tracker_id is not None and tracker_id in track_true for tracker_id in detections.tracker_id], dtype=bool)
             detections.filter(mask=mask, inplace=True)
