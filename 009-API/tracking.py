@@ -16,6 +16,7 @@ import torch
 import argparse
 import os
 import sys
+import json
 
 sys.path.append(f"{os.getcwd()}/ByteTrack")
 from yolox.tracker.byte_tracker import BYTETracker, STrack
@@ -97,6 +98,20 @@ def are_boxes_touching(box1, box2):
     # If there's an overlap in both x-axis and y-axis, the boxes are touching
     return True
 
+
+def write_json_file(file_path, data):
+    with open(file_path, 'w') as file:
+        json.dump(data, file)
+
+
+def read_json_file(file_path):
+    if not os.path.exists(file_path):
+        return {}
+
+    with open(file_path, 'r') as file:
+        return json.load(file)
+
+
 def process_video_with_detection(video_path, output_directory="static/results", method="nearby-hand"):
 
     SOURCE_VIDEO_PATH = os.path.join(os.getcwd(), video_path)
@@ -104,6 +119,15 @@ def process_video_with_detection(video_path, output_directory="static/results", 
 
     print(f"Source video path: {SOURCE_VIDEO_PATH}")
     print(f"Target video path: {TARGET_VIDEO_PATH}")
+
+    file_path = 'data.json'
+    data = read_json_file(file_path)
+    if method == "nearby-hand":
+        data[os.path.basename(video_path)] = "Tracked person with the closest wrist to detected guns"
+    else:
+        data[os.path.basename(video_path)] = "Track person with the bounding boxes near detected guns"
+
+    write_json_file(file_path, data)
 
     gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns.pt'))
     gun_model.fuse()
@@ -137,8 +161,6 @@ def process_video_with_detection(video_path, output_directory="static/results", 
     follow_det = -1
     flag = False
     track_true = set()
-
-    pdb.set_trace()
 
     # open target video file
     with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
