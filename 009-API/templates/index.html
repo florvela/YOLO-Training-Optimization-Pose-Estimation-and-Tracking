@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gun Detection - Upload Video</title>
+</head>
+<body>
+    <h1>Gun Detection - Upload Video</h1>
+    <form action="{{ url_for('upload_video') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="video" accept=".mp4, .avi, .mkv">
+        <input type="submit" value="Upload Video">
+    </form>
+</body>
+</html>
