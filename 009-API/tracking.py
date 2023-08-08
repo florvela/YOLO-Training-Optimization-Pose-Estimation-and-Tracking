@@ -5,7 +5,6 @@ from ultralytics import YOLO
 from onemetric.cv.utils.iou import box_iou_batch
 from dataclasses import dataclass
 from supervision.draw.color import ColorPalette
-from supervision.geometry.dataclasses import Point
 from supervision.video.dataclasses import VideoInfo
 from supervision.video.source import get_video_frames_generator
 from supervision.video.sink import VideoSink
@@ -129,6 +128,7 @@ def process_video_with_detection(video_path, output_directory="static/results", 
 
     write_json_file(file_path, data)
 
+    # gun_model = YOLO('yolov8n.pt')
     gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns.pt'))
     gun_model.fuse()
 
