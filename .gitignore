@@ -152,3 +152,7 @@ scripts/.openvino_venv/
 */ByteTrack/
 videos_for_testing/
 *.mp4
+*-Evaluating-models/yolov5
+*-Evaluating-models/yolov7
+*-Evaluating-models/yolov8
+*/train_results/*
