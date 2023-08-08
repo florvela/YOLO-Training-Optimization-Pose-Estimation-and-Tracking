@@ -1,0 +1,13 @@
+model_key,model,tf,imgsz,epochs,batch,dataset,pistol_P,pistol_R,pistol_F1,pistol_mAP@.5,pistol_mAP@.5:.95
+model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons2,yolov5,no,800,100,16,v1,0.0716,0.113,0.04382881906825569,0.0276,0.00805
+model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_weapons2,yolov5,yolov5s,640,100,16,v1,0.091,0.123,0.05230373831775701,0.0289,0.00935
+model_yolov5_tf_yolov5s_imgsz_800_epochs_100_batch_16_dataset_v1_weapons2,yolov5,yolov5s,800,100,16,v1,0.163,0.0431,0.03408685104318292,0.0292,0.0104
+model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_weapons2,yolov7,yolov7training,640,100,16,v1,0.476,0.203,0.14230927835051546,0.21,0.0867
+model_yolov7_tf_yolov7training_imgsz_800_epochs_100_batch_8_dataset_v1_weapons2,yolov7,yolov7training,800,100,8,v1,0.138,0.156,0.07322448979591836,0.0769,0.0289
+model_yolov8_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons2,yolov8,no,800,100,16,v1,0.137,0.117,0.06310629921259843,0.0488,0.0198
+model_yolov8_tf_yolov8l_imgsz_800_epochs_100_batch_16_dataset_v1_weapons2,yolov8,yolov8l,800,100,16,v1,0.157,0.127,0.07020774647887323,0.0615,0.0261
+model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_weapons2,yolov8,yolov8s,640,100,16,v1,0.159,0.107,0.06395864661654135,0.0484,0.0199
+model_yolov8_tf_yolov8s_imgsz_640_epochs_73_batch_16_dataset_v22,yolov8,yolov8s,640,73,16,v2,0.558,0.348,0.21433112582781455,0.372,0.147
+model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v1_weapons2,yolov8,yolov8s,800,100,16,v1,0.222,0.118,0.07704705882352943,0.0726,0.0307
+model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v3_randomizedclips2,yolov8,yolov8s,800,100,16,v3,0.965,0.937,0.4753969505783386,0.96,0.585
+model_yolov8_tf_yolov8s_imgsz_800_epochs_78_batch_16_dataset_v22,yolov8,yolov8s,800,78,16,v2,0.657,0.274,0.19335982814178304,0.315,0.126
