@@ -1,0 +1,81 @@
+model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons
+Model: yolov5
+TF: no
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+[34m[1mval: [0mdata=data/coco128.yaml, weights=['/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=val, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-207-gdf48c20 Python-3.10.9 torch-1.13.1+cpu CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+Dataset not found ⚠️, missing paths ['/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/datasets/coco128/images/train2017']
+Downloading https://ultralytics.com/assets/coco128.zip to coco128.zip...
+
+  0%|          | 0.00/6.66M [00:00<?, ?B/s]
+ 25%|██▍       | 1.66M/6.66M [00:00<00:00, 17.4MB/s]
+ 62%|██████▏   | 4.12M/6.66M [00:00<00:00, 22.3MB/s]
+ 98%|█████████▊| 6.55M/6.66M [00:00<00:00, 23.5MB/s]
+100%|██████████| 6.66M/6.66M [00:00<00:00, 22.8MB/s]
+Dataset download success ✅ (6.8s), saved to [1m/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/datasets[0m
+Traceback (most recent call last):
+  File "/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/yolov5/val.py", line 411, in <module>
+    main(opt)
+  File "/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/yolov5/val.py", line 382, in main
+    run(**vars(opt))
+  File "/home/flor/.local/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/yolov5/val.py", line 170, in run
+    assert ncm == nc, f'{weights} ({ncm} classes) trained on different --data than what you passed ({nc} ' \
+AssertionError: ['/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons/weights/best.pt'] (2 classes) trained on different --data than what you passed (80 classes). Pass correct combination of --weights and --data that are trained together.
+model_yolov8_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons
+Model: yolov8
+TF: no
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+WARNING ⚠️ 'data' is missing. Using default 'data=coco8.yaml'.
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1+cpu CPU (Intel Core(TM) i7-7500U 2.70GHz)
+Model summary (fused): 168 layers, 3006038 parameters, 0 gradients, 8.1 GFLOPs
+
+Dataset 'coco8.yaml' images not found ⚠️, missing path '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8/images/val'
+Downloading https://ultralytics.com/assets/coco8.zip to '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8.zip'...
+
+  0%|          | 0.00/433k [00:00<?, ?B/s]
+100%|██████████| 433k/433k [00:00<00:00, 6.73MB/s]
+
+Unzipping /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8.zip to /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets...:   0%|          | 0/25 [00:00<?, ?file/s]
+Unzipping /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8.zip to /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets...: 100%|██████████| 25/25 [00:00<00:00, 1523.01file/s]
+Dataset download success ✅ (1.5s), saved to [1m/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets[0m
+
+
+[34m[1mval: [0mScanning /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8/labels/val...:   0%|          | 0/4 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8/labels/val... 4 images, 0 backgrounds, 0 corrupt: 100%|██████████| 4/4 [00:00<00:00, 195.02it/s]
+[34m[1mval: [0mNew cache created: /home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002 - Optimization with OpenVINO/notebooks/003-yolov8-optimization/datasets/coco8/labels/val.cache
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/1 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/flor/anaconda3/bin/yolo", line 8, in <module>
+    sys.exit(entrypoint())
+  File "/home/flor/anaconda3/lib/python3.10/site-packages/ultralytics/cfg/__init__.py", line 432, in entrypoint
+    getattr(model, mode)(**overrides)  # default args from model
+  File "/home/flor/.local/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/flor/anaconda3/lib/python3.10/site-packages/ultralytics/engine/model.py", line 297, in val
+    validator(model=self.model)
+  File "/home/flor/.local/lib/python3.10/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/flor/anaconda3/lib/python3.10/site-packages/ultralytics/engine/validator.py", line 174, in __call__
+    self.update_metrics(preds, batch)
+  File "/home/flor/anaconda3/lib/python3.10/site-packages/ultralytics/models/yolo/detect/val.py", line 108, in update_metrics
+    self.confusion_matrix.process_batch(predn, labelsn)
+  File "/home/flor/anaconda3/lib/python3.10/site-packages/ultralytics/utils/metrics.py", line 248, in process_batch
+    self.matrix[self.nc, gc] += 1  # true background
+IndexError: index 16 is out of bounds for axis 1 with size 3
+Sentry is attempting to send 2 pending events
+Waiting up to 2 seconds
+Press Ctrl-C to quit
