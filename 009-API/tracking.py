@@ -129,7 +129,7 @@ def process_video_with_detection(video_path, output_directory="static/results", 
     write_json_file(file_path, data)
 
     # gun_model = YOLO('yolov8n.pt')
-    gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns.pt'))
+    gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns_78.pt'))
     gun_model.fuse()
 
     model = YOLO(os.path.join(os.getcwd(),'weights/yolov8n-pose.pt'))
@@ -162,12 +162,15 @@ def process_video_with_detection(video_path, output_directory="static/results", 
     flag = False
     track_true = set()
 
+    counter = 0
     # open target video file
     with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
         # loop over video frames
         if method == "nearby-hand":
             for frame in tqdm(generator, total=video_info.total_frames):
-                gun_results = gun_model(frame, conf=0.5)
+                counter += 1
+                print(f"{counter}/{video_info.total_frames}")
+                gun_results = gun_model(frame, conf=0.75)
 
                 # model prediction on single frame and conversion to supervision Detections
                 results = model(frame, conf=0.7)
@@ -232,6 +235,8 @@ def process_video_with_detection(video_path, output_directory="static/results", 
                 sink.write_frame(frame)
         else:
             for frame in tqdm(generator, total=video_info.total_frames):
+                counter += 1
+                print(f"{counter}/{video_info.total_frames}")
                 gun_results = gun_model(frame, conf=0.5)
 
                 # model prediction on single frame and conversion to supervision Detections
