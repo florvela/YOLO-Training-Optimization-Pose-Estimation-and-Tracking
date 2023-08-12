@@ -1,0 +1,61 @@
+model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons
+Model: yolov5
+TF: no
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=val, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons, exist_ok=False, half=False, dnn=False
+[31m[1mrequirements:[0m Ultralytics requirement ['gitpython>=3.1.30'] not found, attempting AutoUpdate...
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.
+ERROR: Could not find a version that satisfies the requirement gitpython>=3.1.30 (from versions: 0.1.7, 0.2.0b1, 0.3.0b1, 0.3.0b2, 0.3.1b2, 0.3.2rc1, 0.3.2, 0.3.2.1, 0.3.3, 0.3.4, 0.3.5, 0.3.6, 0.3.7, 1.0.0, 1.0.1, 1.0.2, 2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.0.4, 2.0.5, 2.0.6, 2.0.7, 2.0.8, 2.0.9.dev0, 2.0.9.dev1, 2.0.9, 2.1.0, 2.1.1, 2.1.3, 2.1.4, 2.1.5, 2.1.6, 2.1.7, 2.1.8, 2.1.9, 2.1.10, 2.1.11, 2.1.13, 2.1.14, 2.1.15)
+ERROR: No matching distribution found for gitpython>=3.1.30
+[31m[1mrequirements:[0m ❌ Command 'pip install --no-cache "gitpython>=3.1.30"  ' returned non-zero exit status 1.
+YOLOv5 🚀 v7.0-207-gdf48c20 Python-3.10.10 torch-2.0.0 CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels...:   0%|          | 0/813 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 1 images, 0 backgrounds, 0 corrupt:   0%|          | 1/813 [00:05<1:14:12,  5.48s/it]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 144 images, 1 backgrounds, 0 corrupt:  18%|█▊        | 144/813 [00:05<00:18, 36.49it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 300 images, 10 backgrounds, 0 corrupt:  37%|███▋      | 300/813 [00:05<00:05, 89.82it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 450 images, 25 backgrounds, 0 corrupt:  55%|█████▌    | 450/813 [00:05<00:02, 156.95it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 590 images, 38 backgrounds, 0 corrupt:  73%|███████▎  | 590/813 [00:05<00:00, 236.11it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 744 images, 45 backgrounds, 0 corrupt:  92%|█████████▏| 744/813 [00:05<00:00, 344.77it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels... 813 images, 47 backgrounds, 0 corrupt: 100%|██████████| 813/813 [00:06<00:00, 134.68it/s]
+[34m[1mval: [0mNew cache created: /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/valid/labels.cache
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   4%|▍         | 1/26 [00:08<03:35,  8.61s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 2/26 [00:18<03:49,  9.54s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  12%|█▏        | 3/26 [00:29<03:49,  9.98s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 4/26 [00:39<03:45, 10.25s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  19%|█▉        | 5/26 [00:50<03:37, 10.38s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 6/26 [01:00<03:26, 10.33s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  27%|██▋       | 7/26 [01:11<03:18, 10.45s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 8/26 [01:20<03:02, 10.11s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  35%|███▍      | 9/26 [01:31<02:54, 10.24s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 10/26 [01:41<02:44, 10.29s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  42%|████▏     | 11/26 [01:52<02:35, 10.40s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 12/26 [02:04<02:31, 10.79s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  50%|█████     | 13/26 [02:15<02:23, 11.05s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 14/26 [02:27<02:14, 11.22s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  58%|█████▊    | 15/26 [02:39<02:06, 11.52s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 16/26 [02:51<01:57, 11.77s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  65%|██████▌   | 17/26 [03:03<01:46, 11.81s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 18/26 [03:16<01:36, 12.11s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  73%|███████▎  | 19/26 [03:30<01:27, 12.48s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 20/26 [03:42<01:14, 12.46s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  81%|████████  | 21/26 [03:55<01:02, 12.51s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 22/26 [04:09<00:52, 13.10s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  88%|████████▊ | 23/26 [04:26<00:42, 14.18s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 24/26 [04:43<00:30, 15.12s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  96%|█████████▌| 25/26 [04:56<00:14, 14.33s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 26/26 [04:57<00:00, 10.57s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 26/26 [04:57<00:00, 11.46s/it]
+                   all        813        830      0.828      0.737        0.8      0.467
+                 knife        813        413      0.881      0.824      0.891      0.547
+                pistol        813        417      0.775       0.65      0.708      0.387
+Speed: 0.5ms pre-process, 363.7ms inference, 0.5ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_weapons[0m
