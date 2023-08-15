@@ -155,3 +155,5 @@ scripts/.openvino_venv/
 *-Evaluating-models/yolov7
 *-Evaluating-models/yolov8
 */train_results/*
+*venv*
+*/nncf
