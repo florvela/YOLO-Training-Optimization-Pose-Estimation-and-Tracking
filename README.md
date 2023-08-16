@@ -2,23 +2,33 @@
 
 This repository contains the code for training YOLOv5, YOLOv7, and YOLOv8 models for object detection using Python 3. These models are widely used for real-time object detection tasks due to their accuracy and efficiency. The models are trained on a custom Roboflow dataset. The project is currently in development, and welcome to contributions and collaborations.
 
-## Setup
+## [001-Datasets](001-Datasets)
 
-Build OpenCV 4 from source with Gstreamer:
+This directory contains code designed to facilitate the acquisition and preprocessing of gun detection datasets. 
 
-```shell
-./scripts/install_gstreamer.sh
-```
+The `create_datasets.ipynb` notebook assists in obtaining datasets from Roboflow. It provides functionality to download three distinct datasets:
 
-## Training
+1. **Dataset 1: Knives and Pistols**
+   - Annotated images containing knives and pistols.
+   
+2. **Dataset 2: Guns**
+   - Extensive dataset featuring the "gun" class.
+   - Various images including people holding phones and guns of different sizes.
+   
+3. **Dataset 3: Randomized Clips (For Testing)**
+   - Comprises images sourced from security cameras.
+   - Primarily used for testing.
 
-1) Use the following notebooks in Google Colaboratory to train YOLO models using GPU:
 
-    * [Training YOLO v5 on a custom dataset from Roboflow](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/001%20-%20Training%20models/yolov5/train_yolov5.ipynb)
-    * [Training YOLO v7 on a custom dataset from Roboflow](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/001%20-%20Training%20models/yolov7/train_yolov7.ipynb)
-    * [Training YOLO v8 on a custom dataset from Roboflow](https://github.com/florvela/YOLO-OpenVINO-TVM-GStreamer/blob/main/001%20-%20Training%20models/yolov8/train_yolov8.ipynb)
+## [002-Training-models](002-Training-models)
 
-2) Make sure you save the wights of the trained models
+This directory contains notebooks that focus on training YOLO (You Only Look Once) object detection models using different versions of the YOLO architecture.
+
+### Notebooks
+
+- [Train YOLOv5](002-Training-models/yolov5/train_yolov5.ipynb)
+- [Train YOLOv7](002-Training-models/yolov7/train_yolov7.ipynb)
+- [Train YOLOv8](002-Training-models/yolov8/train_yolov8.ipynb)
 
 ## Optimization
 
@@ -57,6 +67,17 @@ Use the TVM compiler to optimize the trained models.
 ## Real-Time Tracking
 
 The object tracking implementation in this project utilizes GStreamer.
+
+### Setup
+
+Build OpenCV 4 from source with Gstreamer:
+
+```shell
+./scripts/install_gstreamer.sh
+```
+
+
+
 
 ## Contact
 
