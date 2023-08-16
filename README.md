@@ -4,9 +4,9 @@ This repository contains the code for the training and optimization of YOLOv5, Y
 
 The project is currently in development, and welcome to contributions and collaborations.
 
-## [1) Datasets](001-Datasets)
+## 1) Datasets
 
-This directory contains code designed to facilitate the acquisition and preprocessing of gun detection datasets. 
+This [directory](001-Datasets) contains code designed to facilitate the acquisition and preprocessing of gun detection datasets. 
 
 The `create_datasets.ipynb` notebook assists in obtaining datasets from Roboflow. It provides functionality to download three distinct datasets:
 
@@ -22,9 +22,9 @@ The `create_datasets.ipynb` notebook assists in obtaining datasets from Roboflow
    - Primarily used for testing.
 
 
-## [2) Training models](002-Training-models)
+## 2) Training models
 
-This directory contains notebooks that focus on training YOLO (You Only Look Once) object detection models using different versions of the YOLO architecture.
+This [directory](002-Training-models) contains notebooks that focus on training YOLO (You Only Look Once) object detection models using different versions of the YOLO architecture.
 
 ### Notebooks
 
@@ -34,13 +34,29 @@ This directory contains notebooks that focus on training YOLO (You Only Look Onc
 
 > **_NOTE:_**: To avoid memory issues in the display of the notebook use the following command: ```jupyter notebook --NotebookApp.iopub_data_rate_limit=1.0e10```
 
-## Optimization
+## 3) Evaluating models
 
-### [4) Optimization with OpenVINO](004-Optimization-with-OpenVINO) 
+This [directory](003-Evaluating-models) contains notebooks designed for evaluating YOLO object detection models, specifically focusing on YOLOv5, YOLOv7, and YOLOv8 architectures. Additionally, the folder includes code for saving evaluation outputs to text files, converting them to CSV format, and facilitating a comprehensive understanding of the evaluation results.
 
-OpenVINO is a toolkit developed by Intel to optimize neural network models for efficient deployment across a wide range of hardware platforms, including CPUs, GPUs, and FPGAs. It provides pre-trained models, model conversion tools, and hardware-specific optimizations to accelerate inference performance while maintaining accuracy.
+### Notebooks
 
-#### Virtual Environment Setup
+#### [Evaluate vs Original Dataset](eval_vs_original_dataset.ipynb)
+
+In this notebook, you'll find instructions on evaluating YOLO models (YOLOv5, YOLOv7, and YOLOv8) on the original datasets they were trained on. The notebook provides guidance on loading the trained models and dataset, performing evaluation, and saving the evaluation output to a text file.
+
+#### [Evaluate vs Randomized Clips](eval_vs_randomized_clips.ipynb)
+
+Evaluate YOLO models (YOLOv5, YOLOv7, and YOLOv8) on the randomized clips dataset, which is intended for testing purposes. The notebook outlines the steps to load models, perform evaluation, and save the evaluation results to a text file.
+
+#### [Understanding Output CSVs](understanding_output_csvs.ipynb)
+
+This notebook delves into the process of reading and interpreting the CSV output files generated from the evaluation results. It explains the decisions and criteria used to select models for the final API, allowing for a clearer understanding of the evaluation outcomes.
+
+## 4) Optimization with OpenVINO
+
+This [directory](004-Optimization-with-OpenVINO) has the code for optimizing yolov8 models with OpenVINO. OpenVINO is a toolkit developed by Intel to optimize neural network models for efficient deployment across a wide range of hardware platforms, including CPUs, GPUs, and FPGAs. It provides pre-trained models, model conversion tools, and hardware-specific optimizations to accelerate inference performance while maintaining accuracy.
+
+### Virtual Environment Setup
 
 Create a virtual environment for the notebooks using the provided script:
 
@@ -60,7 +76,7 @@ pip install --no-deps openvino openvino-dev nncf &&
 pip install -r requirements.txt
 ```
 
-#### Optimizing YOLOv8 with OpenVINO
+### Optimizing YOLOv8 with OpenVINO
 
 For optimizing the YOLOv8 model using OpenVINO, follow these steps:
 
