@@ -4,7 +4,7 @@ This repository contains the code for the training and optimization of YOLOv5, Y
 
 The project is currently in development, and welcome to contributions and collaborations.
 
-## [001 - Datasets](001-Datasets)
+## [1) Datasets](001-Datasets)
 
 This directory contains code designed to facilitate the acquisition and preprocessing of gun detection datasets. 
 
@@ -22,7 +22,7 @@ The `create_datasets.ipynb` notebook assists in obtaining datasets from Roboflow
    - Primarily used for testing.
 
 
-## [002 - Training models](002-Training-models)
+## [2) Training models](002-Training-models)
 
 This directory contains notebooks that focus on training YOLO (You Only Look Once) object detection models using different versions of the YOLO architecture.
 
@@ -36,7 +36,7 @@ This directory contains notebooks that focus on training YOLO (You Only Look Onc
 
 ## Optimization
 
-### [004 - Optimization with OpenVINO](004-Optimization-with-OpenVINO) 
+### [4) Optimization with OpenVINO](004-Optimization-with-OpenVINO) 
 
 OpenVINO is a toolkit developed by Intel to optimize neural network models for efficient deployment across a wide range of hardware platforms, including CPUs, GPUs, and FPGAs. It provides pre-trained models, model conversion tools, and hardware-specific optimizations to accelerate inference performance while maintaining accuracy.
 
