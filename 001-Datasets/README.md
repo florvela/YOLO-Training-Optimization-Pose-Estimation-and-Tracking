@@ -1,6 +1,6 @@
-# Gun Detection Code
+# Gun Detection Dataset
 
-Welcome to the Gun Detection Code folder. This directory contains code designed to facilitate the acquisition, preprocessing, and testing of gun detection datasets. The code is organized into the following sections:
+This directory contains code designed to facilitate the acquisition and preprocessing of gun detection datasets. 
 
 ## Datasets
 
@@ -19,11 +19,7 @@ The `create_datasets.ipynb` notebook assists in obtaining datasets from Roboflow
 
 ## Testing Enhancement
 
-The `test_enhancement.ipynb` notebook focuses on improving testing relevance. It downloads the randomized clips dataset and modifies bounding box labels to align with the first version of the dataset. This alignment facilitates effective testing of models trained on version 1.
-
-## Usage
-
-To utilize the provided code, simply open the respective Jupyter notebooks using your preferred environment and follow the instructions within. Make sure to have the required dependencies installed.
+The notebook focuses on improving testing relevance. It downloads the randomized clips dataset and modifies bounding box labels to align with the first version of the dataset. This alignment facilitates effective testing of models trained on version 1.
 
 ## Support
 
