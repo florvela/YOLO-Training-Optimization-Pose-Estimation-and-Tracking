@@ -49,9 +49,6 @@ def validate(
         preds = validator.postprocess(preds)
         validator.update_metrics(preds, batch)
     
-
-    import pdb
-    pdb.set_trace()
     stats = validator.get_stats()
     return stats, validator.seen, validator.nt_per_class.sum()
 

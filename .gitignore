@@ -157,3 +157,4 @@ scripts/.openvino_venv/
 */train_results/*
 *venv*
 */nncf
+*_openvino_model/
