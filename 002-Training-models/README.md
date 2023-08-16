@@ -4,7 +4,7 @@ This directory contains notebooks that focus on training YOLO (You Only Look Onc
 
 ## Notebooks
 
-### [Train YOLOv8](yolov5/train_yolov5.ipynb)
+### [Train YOLOv5](yolov5/train_yolov5.ipynb)
 
 This notebook guides you through the process of training a YOLOv5 model for object detection tasks. Follow the instructions within the notebook to train your model using the specified dataset and parameters.
 
@@ -12,7 +12,7 @@ This notebook guides you through the process of training a YOLOv5 model for obje
 
 This notebook guides you through the process of training a YOLOv7 model for object detection tasks. Follow the instructions within the notebook to train your model using the specified dataset and parameters.
 
-### [Train YOLOv5](yolov8/train_yolov8.ipynb)
+### [Train YOLOv8](yolov8/train_yolov8.ipynb)
 
 This notebook guides you through the process of training a YOLOv8 model for object detection tasks. Follow the instructions within the notebook to train your model using the specified dataset and parameters.
 
