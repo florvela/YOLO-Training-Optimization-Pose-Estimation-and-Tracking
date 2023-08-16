@@ -1,6 +1,8 @@
 # YOLOv5, YOLOv7, and YOLOv8 Model Training and Optimization
 
-This repository contains the code for training YOLOv5, YOLOv7, and YOLOv8 models for object detection using Python 3. These models are widely used for real-time object detection tasks due to their accuracy and efficiency. The models are trained on a custom Roboflow dataset. The project is currently in development, and welcome to contributions and collaborations.
+This repository contains the code for the training and optimization of YOLOv5, YOLOv7, and YOLOv8 models for object detection using Python 3. These models are widely used for real-time object detection tasks due to their accuracy and efficiency. The work involves training these models with a custom Roboflow dataset, and the use of optimization techniques utilizing OpenVINO and apache TVM, adding an extra layer of performance. Additionally, we dive into the world of tracking and pose estimation using yolov8-pose.
+
+The project is currently in development, and welcome to contributions and collaborations.
 
 ## [001-Datasets](001-Datasets)
 
