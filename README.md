@@ -102,10 +102,11 @@ cp cmake/config.cmake build
 
 conda env create --file conda/build-environment.yaml
 conda activate tvm-build
+```
 
-# conda build --output-folder=conda/pkg  conda/recipe
-# conda install tvm -c ./conda/pkg
+modify build/config.cmake to add set(USE_LLVM /path/to/your/llvm/bin/llvm-config)
 
+```bash
 cd build
 cmake .. -G Ninja
 ninja
@@ -113,12 +114,15 @@ ninja
 pip install -r requirements.txt
 
 export TVM_HOME=/path/to/tvm
+export TVM_HOME=~/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/005-Optimization-with-ApacheTVM/tvm
 export PYTHONPATH=$TVM_HOME/python:${PYTHONPATH}
 
 pip3 install --user numpy decorator attrs
 pip3 install --user typing-extensions psutil scipy
 pip3 install --user tornado
 pip3 install --user tornado psutil 'xgboost>=1.1.0' cloudpickle
+
+conda install -c conda-forge gcc=12.1.0
 ```
 
 The code for optimizing yolo models can be found in the notebooks of this [directory](005-Optimization-with-ApacheTVM)

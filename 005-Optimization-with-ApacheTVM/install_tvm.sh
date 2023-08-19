@@ -19,9 +19,12 @@ ninja
 pip install -r requirements.txt
 
 export TVM_HOME=/path/to/tvm
+export TVM_HOME=~/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/005-Optimization-with-ApacheTVM/tvm
 export PYTHONPATH=$TVM_HOME/python:${PYTHONPATH}
 
 pip3 install --user numpy decorator attrs
 pip3 install --user typing-extensions psutil scipy
 pip3 install --user tornado
 pip3 install --user tornado psutil 'xgboost>=1.1.0' cloudpickle
+
+conda install -c conda-forge gcc=12.1.0
