@@ -159,3 +159,4 @@ scripts/.openvino_venv/
 */nncf
 *_openvino_model/
 005-Optimization-with-ApacheTVM/tvm/
+videos_for_testing/
