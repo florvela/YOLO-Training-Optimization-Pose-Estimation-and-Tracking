@@ -1,0 +1,381 @@
+model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8m
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 218 layers, 25840339 parameters, 0 gradients, 78.7 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:13<01:59, 13.22s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:28<01:55, 14.38s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:41<01:37, 13.89s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:55<01:23, 13.95s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [01:10<01:10, 14.06s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [01:23<00:55, 13.77s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [01:36<00:41, 13.76s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [01:50<00:27, 13.78s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [02:04<00:13, 13.77s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [02:10<00:00, 11.36s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [02:10<00:00, 13.05s/it]
+                   all        159        157      0.993      0.962      0.977      0.941
+Speed: 0.6ms preprocess, 816.0ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8m_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8m
+Imgsz: 640
+Epochs: 50
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 218 layers, 25840339 parameters, 0 gradients, 78.7 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:12<01:49, 12.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:26<01:45, 13.19s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:40<01:37, 13.92s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:54<01:21, 13.67s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [01:07<01:07, 13.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [01:20<00:53, 13.44s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [01:35<00:41, 13.80s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [01:49<00:27, 13.81s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [02:02<00:13, 13.75s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [02:08<00:00, 11.31s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [02:08<00:00, 12.86s/it]
+                   all        159        157      0.991      0.962      0.974      0.938
+Speed: 0.5ms preprocess, 804.1ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8m_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v2_loss_Adam_lr_001
+Model: yolov8
+TF: yolov8s
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v2
+Loss: Adam
+Lr0: 001
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:05<00:45,  5.08s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:11<00:46,  5.84s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:17<00:42,  6.06s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:24<00:37,  6.31s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:31<00:32,  6.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [00:38<00:26,  6.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [00:44<00:19,  6.49s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [00:50<00:13,  6.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [00:57<00:06,  6.45s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [00:59<00:00,  5.25s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [00:59<00:00,  5.98s/it]
+                   all        159        157      0.986      0.962      0.981      0.941
+Speed: 0.5ms preprocess, 371.9ms inference, 0.0ms loss, 0.4ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v2_loss_Adam_lr_001[0m
+model_yolov8_tf_yolov8s_imgsz_640_epochs_300_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 640
+Epochs: 300
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:05<00:45,  5.07s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:11<00:47,  5.99s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:18<00:44,  6.33s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:25<00:39,  6.50s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:31<00:32,  6.54s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [00:38<00:26,  6.54s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [00:45<00:20,  6.75s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [00:53<00:14,  7.07s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [01:00<00:07,  7.12s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:03<00:00,  5.84s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:03<00:00,  6.35s/it]
+                   all        159        157          1      0.961      0.982      0.942
+Speed: 0.6ms preprocess, 394.5ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_640_epochs_300_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8s_imgsz_640_epochs_50_batch_16_dataset_v2_loss_Adam_lr_001
+Model: yolov8
+TF: yolov8s
+Imgsz: 640
+Epochs: 50
+Batch: 16
+Dataset: v2
+Loss: Adam
+Lr0: 001
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:04<00:43,  4.84s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:11<00:45,  5.67s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:17<00:42,  6.02s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:23<00:36,  6.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:30<00:30,  6.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [00:36<00:24,  6.20s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [00:42<00:18,  6.19s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [00:48<00:12,  6.23s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [00:55<00:06,  6.24s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [00:57<00:00,  5.11s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [00:57<00:00,  5.77s/it]
+                   all        159        157      0.997      0.955      0.979      0.932
+Speed: 0.5ms preprocess, 358.5ms inference, 0.0ms loss, 0.4ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_640_epochs_50_batch_16_dataset_v2_loss_Adam_lr_001[0m
+model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:08<01:14,  8.33s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:18<01:14,  9.31s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:28<01:06,  9.51s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:37<00:57,  9.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:47<00:48,  9.65s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [00:57<00:38,  9.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [01:06<00:28,  9.64s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [01:16<00:19,  9.61s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [01:26<00:09,  9.63s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:29<00:00,  7.83s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:29<00:00,  8.98s/it]
+                   all        159        157      0.987      0.961      0.982      0.949
+Speed: 1.0ms preprocess, 559.0ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8s_imgsz_800_epochs_40_batch_16_dataset_v2_loss_SGD_lr_01 copy
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 40
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01 copy
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/bin/yolo", line 8, in <module>
+    sys.exit(entrypoint())
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/cfg/__init__.py", line 363, in entrypoint
+    check_dict_alignment(full_args_dict, {a: ''})
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/cfg/__init__.py", line 184, in check_dict_alignment
+    raise SyntaxError(string + CLI_HELP_MSG) from e
+SyntaxError: '[31m[1mcopy/weights/best.pt[0m' is not a valid YOLO argument. 
+
+    Arguments received: ['yolo', 'val', 'model=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov8_tf_yolov8s_imgsz_800_epochs_40_batch_16_dataset_v2_loss_SGD_lr_01', 'copy/weights/best.pt', 'data=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/trained_on_v2/../../datasets/yolov8_original_v2/data.yaml', 'split=test', 'name=model_yolov8_tf_yolov8s_imgsz_800_epochs_40_batch_16_dataset_v2_loss_SGD_lr_01', 'copy']. Ultralytics 'yolo' commands use the following syntax:
+
+        yolo TASK MODE ARGS
+
+        Where   TASK (optional) is one of ('detect', 'segment', 'classify', 'pose')
+                MODE (required) is one of ('train', 'val', 'predict', 'export', 'track', 'benchmark')
+                ARGS (optional) are any number of custom 'arg=value' pairs like 'imgsz=320' that override defaults.
+                    See all ARGS at https://docs.ultralytics.com/usage/cfg or with 'yolo cfg'
+
+    1. Train a detection model for 10 epochs with an initial learning_rate of 0.01
+        yolo train data=coco128.yaml model=yolov8n.pt epochs=10 lr0=0.01
+
+    2. Predict a YouTube video using a pretrained segmentation model at image size 320:
+        yolo predict model=yolov8n-seg.pt source='https://youtu.be/Zgi9g1ksQHc' imgsz=320
+
+    3. Val a pretrained detection model at batch-size 1 and image size 640:
+        yolo val model=yolov8n.pt data=coco128.yaml batch=1 imgsz=640
+
+    4. Export a YOLOv8n classification model to ONNX format at image size 224 by 128 (no TASK required)
+        yolo export model=yolov8n-cls.pt format=onnx imgsz=224,128
+
+    5. Run special commands:
+        yolo help
+        yolo checks
+        yolo version
+        yolo settings
+        yolo copy-cfg
+        yolo cfg
+
+    Docs: https://docs.ultralytics.com
+    Community: https://community.ultralytics.com
+    GitHub: https://github.com/ultralytics/ultralytics
+    
+model_yolov8_tf_yolov8s_imgsz_800_epochs_60_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 60
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:08<01:15,  8.36s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:18<01:13,  9.13s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:28<01:07,  9.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:38<00:58,  9.74s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:48<00:49,  9.93s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [00:58<00:39,  9.99s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [01:08<00:30, 10.02s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [01:18<00:19,  9.93s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [01:28<00:09,  9.94s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:32<00:00,  8.13s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:32<00:00,  9.24s/it]
+                   all        159        157      0.993      0.962      0.977      0.946
+Speed: 1.1ms preprocess, 574.5ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_800_epochs_60_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8s_imgsz_800_epochs_40_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 40
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:09<01:29,  9.91s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:20<01:22, 10.37s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:30<01:11, 10.23s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:40<01:01, 10.20s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:50<00:50, 10.13s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [01:01<00:41, 10.30s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [01:12<00:31, 10.47s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [01:22<00:20, 10.44s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [01:32<00:10, 10.31s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:36<00:00,  8.38s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:36<00:00,  9.67s/it]
+                   all        159        157      0.997      0.924       0.98      0.932
+Speed: 1.0ms preprocess, 601.6ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_800_epochs_40_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8s_imgsz_800_epochs_80_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 80
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 168 layers, 11125971 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original_v2/test/labels.cache... 159 images, 2 backgrounds, 0 corrupt: 100%|██████████| 159/159 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/10 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  10%|█         | 1/10 [00:09<01:27,  9.77s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  20%|██        | 2/10 [00:20<01:21, 10.14s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  30%|███       | 3/10 [00:30<01:12, 10.39s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  40%|████      | 4/10 [00:41<01:03, 10.56s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 5/10 [00:52<00:52, 10.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  60%|██████    | 6/10 [01:02<00:42, 10.54s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  70%|███████   | 7/10 [01:13<00:32, 10.74s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  80%|████████  | 8/10 [01:24<00:21, 10.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  90%|█████████ | 9/10 [01:35<00:10, 10.78s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:39<00:00,  8.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 10/10 [01:39<00:00,  9.94s/it]
+                   all        159        157      0.987      0.961      0.982      0.948
+Speed: 1.2ms preprocess, 618.8ms inference, 0.0ms loss, 0.5ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_800_epochs_80_batch_16_dataset_v2_loss_SGD_lr_01[0m
+model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8m
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.149 🚀 Python-3.10.10 torch-2.0.0 CPU (Apple M2)
+Model summary (fused): 218 layers, 25840339 parameters, 0 gradients, 78.7 GFLOPs
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/data/base.py", line 104, in get_img_files
+    p = Path(p)  # os-agnostic
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py", line 960, in __new__
+    self = cls._from_parts(args)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py", line 594, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/pathlib.py", line 578, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/bin/yolo", line 8, in <module>
+    sys.exit(entrypoint())
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/cfg/__init__.py", line 432, in entrypoint
+    getattr(model, mode)(**overrides)  # default args from model
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/engine/model.py", line 297, in val
+    validator(model=self.model)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/engine/validator.py", line 140, in __call__
+    self.dataloader = self.dataloader or self.get_dataloader(self.data.get(self.args.split), self.args.batch)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/models/yolo/detect/val.py", line 189, in get_dataloader
+    dataset = self.build_dataset(dataset_path, batch=batch_size, mode='val')
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/models/yolo/detect/val.py", line 185, in build_dataset
+    return build_yolo_dataset(self.args, img_path, batch, self.data, mode=mode, stride=gs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/data/build.py", line 74, in build_yolo_dataset
+    return YOLODataset(
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/data/dataset.py", line 40, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/data/base.py", line 72, in __init__
+    self.im_files = self.get_img_files(self.img_path)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/ultralytics/data/base.py", line 120, in get_img_files
+    raise FileNotFoundError(f'{self.prefix}Error loading data from {img_path}\n{HELP_URL}') from e
+FileNotFoundError: [34m[1mval: [0mError loading data from None
+See https://docs.ultralytics.com/yolov5/tutorials/train_custom_data
+model_yolov8_tf_yolov8m_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8m
+Imgsz: 640
+Epochs: 50
+Batch: 16
+Dataset: v2
+Loss: SGD
+Lr0: 01

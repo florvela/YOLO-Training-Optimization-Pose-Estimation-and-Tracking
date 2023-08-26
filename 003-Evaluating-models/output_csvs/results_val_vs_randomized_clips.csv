@@ -1,5 +1,0 @@
-model_key,model,tf,imgsz,epochs,batch,dataset,loss_function,lr0,all_P,all_R,all_F1,all_mAP@.5,all_mAP@.5:.95
-model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01_rc,yolov8,yolov8m,640,100,16,v2,SGD,0.01,0.576,0.335,0.2118111964873765,0.366,0.145
-model_yolov8_tf_yolov8m_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01_rc,yolov8,yolov8m,640,50,16,v2,SGD,0.01,0.331,0.345,0.1689275147928994,0.285,0.114
-model_yolov8_tf_yolov8s_imgsz_640_epochs_300_batch_16_dataset_v2_loss_SGD_lr_01_rc,yolov8,yolov8s,640,300,16,v2,SGD,0.01,0.509,0.311,0.19304756097560974,0.325,0.137
-model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01_rc,yolov8,yolov8s,800,100,16,v2,SGD,0.01,0.578,0.302,0.19835909090909093,0.314,0.124
