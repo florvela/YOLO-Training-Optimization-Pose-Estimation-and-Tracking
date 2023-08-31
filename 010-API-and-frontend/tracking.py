@@ -16,6 +16,7 @@ import argparse
 import os
 import sys
 import json
+import cv2
 
 sys.path.append(f"{os.getcwd()}/ByteTrack")
 from yolox.tracker.byte_tracker import BYTETracker, STrack
@@ -111,10 +112,16 @@ def read_json_file(file_path):
         return json.load(file)
 
 
+def convert_avi_to_mp4(avi_file_path, output_name):
+    os.popen("ffmpeg -i '{input}' -ac 2 -b:v 2000k -c:a aac -c:v libx264 -b:a 160k -vprofile high -bf 0 -strict experimental -f mp4 '{output}.mp4'".format(input = avi_file_path, output = output_name))
+    return True
+
+
 def process_video_with_detection(video_path, output_directory="static/results", method="nearby-hand"):
 
     SOURCE_VIDEO_PATH = os.path.join(os.getcwd(), video_path)
-    TARGET_VIDEO_PATH = os.path.join(output_directory, os.path.basename(video_path))
+    new_video_name = os.path.basename(video_path) #.replace("mp4","avi")
+    TARGET_VIDEO_PATH = os.path.join(output_directory, new_video_name)
 
     print(f"Source video path: {SOURCE_VIDEO_PATH}")
     print(f"Target video path: {TARGET_VIDEO_PATH}")
@@ -122,17 +129,18 @@ def process_video_with_detection(video_path, output_directory="static/results", 
     file_path = 'data.json'
     data = read_json_file(file_path)
     if method == "nearby-hand":
-        data[os.path.basename(video_path)] = "Tracked person with the closest wrist to detected guns"
+        data[new_video_name] = "Tracked person with the closest wrist to detected guns"
     else:
-        data[os.path.basename(video_path)] = "Track person with the bounding boxes near detected guns"
+        data[new_video_name] = "Track person with the bounding boxes near detected guns"
 
     write_json_file(file_path, data)
 
     # gun_model = YOLO('yolov8n.pt')
-    gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns_78.pt'))
+    gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns.pt'))
     gun_model.fuse()
 
-    model = YOLO(os.path.join(os.getcwd(),'weights/yolov8n-pose.pt'))
+    # model = YOLO(os.path.join(os.getcwd(),'weights/yolov8n-pose.pt'))
+    model = YOLO('yolov8n-pose.pt')
     model.fuse()
 
 
@@ -163,8 +171,9 @@ def process_video_with_detection(video_path, output_directory="static/results", 
     track_true = set()
 
     counter = 0
-    # open target video file
+    
     with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
+        
         # loop over video frames
         if method == "nearby-hand":
             for frame in tqdm(generator, total=video_info.total_frames):
@@ -233,6 +242,7 @@ def process_video_with_detection(video_path, output_directory="static/results", 
                 frame = box_annotator.annotate(frame=frame, detections=detections2, labels=labels)
 
                 sink.write_frame(frame)
+            sink.writer.release()
         else:
             for frame in tqdm(generator, total=video_info.total_frames):
                 counter += 1
@@ -309,3 +319,4 @@ def process_video_with_detection(video_path, output_directory="static/results", 
                 frame = box_annotator.annotate(frame=frame, detections=detections2, labels=labels)
 
                 sink.write_frame(frame)
+

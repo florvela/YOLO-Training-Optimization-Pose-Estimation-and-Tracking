@@ -65,7 +65,7 @@ def process_video(video_path, method):
 
 @app.route('/static/results/<path:filename>')
 def serve_video(filename):
-    return send_from_directory(app.config['RESULTS_FOLDER'], filename)
+    return send_from_directory(app.config['RESULTS_FOLDER'], filename, conditional=True)
 
 
 @app.route('/result/<video_name>')
