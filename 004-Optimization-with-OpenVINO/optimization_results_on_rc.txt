@@ -1,0 +1,161 @@
+INFO:nncf:NNCF initialized successfully. Supported frameworks detected: torch, tensorflow, onnx, openvino
+model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01
+model yolov8
+tf yolov8s
+imgsz 800
+epochs 100
+batch 16
+dataset v2
+optimizer SGD
+lr 01
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002-Training-models/train_results/chosen_models/model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01/weights
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty
+{'names': ['gun'], 'nc': 1, 'roboflow': {'license': 'CC BY 4.0', 'project': 'randomized-clips', 'url': 'https://universe.roboflow.com/phillip-lavrador/randomized-clips/dataset/1', 'version': 1, 'workspace': 'phillip-lavrador'}, 'test': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images', 'train': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/train/images', 'val': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images'}
+INFO:openvino.tools.pot.pipeline.pipeline:Inference Engine version:                2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Model Optimizer version:                 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Post-Training Optimization Tool version: 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.statistics.collector:Start computing statistics for algorithms : DefaultQuantization
+INFO:openvino.tools.pot.statistics.collector:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Start algorithm: DefaultQuantization
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithm : ActivationChannelAlignment
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithms : MinMaxQuantization,FastBiasCorrection
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Finished: DefaultQuantization
+ ===========================================================================
+Floating-point model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.293       0.283       0.201      0.0806
+Quantized model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.274       0.273       0.181      0.0717
+Floating-point model performance: 4.92 FPS
+Quantized model performance: 8.39 FPS
+model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01
+model yolov8
+tf yolov8m
+imgsz 640
+epochs 100
+batch 16
+dataset v2
+optimizer SGD
+lr 01
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002-Training-models/train_results/chosen_models/model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01/weights
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty
+{'names': ['gun'], 'nc': 1, 'roboflow': {'license': 'CC BY 4.0', 'project': 'randomized-clips', 'url': 'https://universe.roboflow.com/phillip-lavrador/randomized-clips/dataset/1', 'version': 1, 'workspace': 'phillip-lavrador'}, 'test': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images', 'train': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/train/images', 'val': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images'}
+INFO:openvino.tools.pot.pipeline.pipeline:Inference Engine version:                2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Model Optimizer version:                 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Post-Training Optimization Tool version: 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.statistics.collector:Start computing statistics for algorithms : DefaultQuantization
+INFO:openvino.tools.pot.statistics.collector:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Start algorithm: DefaultQuantization
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithm : ActivationChannelAlignment
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithms : MinMaxQuantization,FastBiasCorrection
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Finished: DefaultQuantization
+ ===========================================================================
+Floating-point model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.439       0.338       0.279        0.11
+Quantized model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.423       0.343       0.281       0.108
+Floating-point model performance: 1.8 FPS
+Quantized model performance: 3.19 FPS
+model_yolov8_tf_yolov8l_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01
+model yolov8
+tf yolov8l
+imgsz 640
+epochs 50
+batch 16
+dataset v2
+optimizer SGD
+lr 01
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002-Training-models/train_results/chosen_models/model_yolov8_tf_yolov8l_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01/weights
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty
+{'names': ['gun'], 'nc': 1, 'roboflow': {'license': 'CC BY 4.0', 'project': 'randomized-clips', 'url': 'https://universe.roboflow.com/phillip-lavrador/randomized-clips/dataset/1', 'version': 1, 'workspace': 'phillip-lavrador'}, 'test': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images', 'train': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/train/images', 'val': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images'}
+INFO:openvino.tools.pot.pipeline.pipeline:Inference Engine version:                2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Model Optimizer version:                 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Post-Training Optimization Tool version: 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.statistics.collector:Start computing statistics for algorithms : DefaultQuantization
+INFO:openvino.tools.pot.statistics.collector:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Start algorithm: DefaultQuantization
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithm : ActivationChannelAlignment
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithms : MinMaxQuantization,FastBiasCorrection
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Finished: DefaultQuantization
+ ===========================================================================
+Floating-point model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788        0.47       0.326       0.323       0.136
+Quantized model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788        0.57       0.276       0.318       0.133
+Floating-point model performance: 0.88 FPS
+Quantized model performance: 1.55 FPS
+model_yolov8_tf_yolov8m_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01
+model yolov8
+tf yolov8m
+imgsz 640
+epochs 50
+batch 16
+dataset v2
+optimizer SGD
+lr 01
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002-Training-models/train_results/chosen_models/model_yolov8_tf_yolov8m_imgsz_640_epochs_50_batch_16_dataset_v2_loss_SGD_lr_01/weights
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty
+{'names': ['gun'], 'nc': 1, 'roboflow': {'license': 'CC BY 4.0', 'project': 'randomized-clips', 'url': 'https://universe.roboflow.com/phillip-lavrador/randomized-clips/dataset/1', 'version': 1, 'workspace': 'phillip-lavrador'}, 'test': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images', 'train': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/train/images', 'val': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images'}
+INFO:openvino.tools.pot.pipeline.pipeline:Inference Engine version:                2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Model Optimizer version:                 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Post-Training Optimization Tool version: 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.statistics.collector:Start computing statistics for algorithms : DefaultQuantization
+INFO:openvino.tools.pot.statistics.collector:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Start algorithm: DefaultQuantization
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithm : ActivationChannelAlignment
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithms : MinMaxQuantization,FastBiasCorrection
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Finished: DefaultQuantization
+ ===========================================================================
+Floating-point model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.344       0.354       0.251         0.1
+Quantized model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.362       0.325       0.251      0.0997
+Floating-point model performance: 1.78 FPS
+Quantized model performance: 3.15 FPS
+model_yolov8_tf_yolov8s_imgsz_800_epochs_60_batch_16_dataset_v2_loss_SGD_lr_01
+model yolov8
+tf yolov8s
+imgsz 800
+epochs 60
+batch 16
+dataset v2
+optimizer SGD
+lr 01
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/002-Training-models/train_results/chosen_models/model_yolov8_tf_yolov8s_imgsz_800_epochs_60_batch_16_dataset_v2_loss_SGD_lr_01/weights
+/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty
+{'names': ['gun'], 'nc': 1, 'roboflow': {'license': 'CC BY 4.0', 'project': 'randomized-clips', 'url': 'https://universe.roboflow.com/phillip-lavrador/randomized-clips/dataset/1', 'version': 1, 'workspace': 'phillip-lavrador'}, 'test': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images', 'train': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/train/images', 'val': '/home/flor/Desktop/git_repos/YOLO-OpenVINO-TVM-GStreamer/datasets/yolov8_rc_no_empty/valid/images'}
+INFO:openvino.tools.pot.pipeline.pipeline:Inference Engine version:                2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Model Optimizer version:                 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.pipeline.pipeline:Post-Training Optimization Tool version: 2023.0.1-11005-fa1c41994f3-releases/2023/0
+INFO:openvino.tools.pot.statistics.collector:Start computing statistics for algorithms : DefaultQuantization
+INFO:openvino.tools.pot.statistics.collector:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Start algorithm: DefaultQuantization
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithm : ActivationChannelAlignment
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Start computing statistics for algorithms : MinMaxQuantization,FastBiasCorrection
+INFO:openvino.tools.pot.algorithms.quantization.default.algorithm:Computing statistics finished
+INFO:openvino.tools.pot.pipeline.pipeline:Finished: DefaultQuantization
+ ===========================================================================
+Floating-point model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.308       0.216       0.196      0.0785
+Quantized model validation results:
+               Class      Images      Labels   Precision      Recall      mAP@.5  mAP@.5:.95
+                 all         764         788       0.311       0.227       0.183      0.0744
+Floating-point model performance: 4.81 FPS
+Quantized model performance: 8.23 FPS

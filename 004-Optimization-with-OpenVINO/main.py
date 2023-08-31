@@ -195,13 +195,15 @@ def optimize(weights_dir, dataset_dir):
     quantized_model_perf = benchmark_performance(quantized_model_path, args)
     print(f"Quantized model performance: {quantized_model_perf} FPS")
 
-    return fp_stats["metrics/mAP50-95(B)"], q_stats["metrics/mAP50-95(B)"], fp_model_perf, quantized_model_perf
+    return fp_stats, q_stats, fp_model_perf, quantized_model_perf
 
 
 def main():
+    results = list()
+
     base_dir = os.path.dirname(os.getcwd())
     models_dir = os.path.join(base_dir, "002-Training-models/train_results/chosen_models")
-    dataset_dir = os.path.join(base_dir, "datasets/yolov8_rc")
+    dataset_dir = os.path.join(base_dir, "datasets/yolov8_rc_no_empty")
 
     for foldername in os.listdir(models_dir):
         variables = foldername.split('_')
@@ -228,7 +230,43 @@ def main():
         print(weights_dir)
         print(dataset_dir)
 
-        optimize(weights_dir, dataset_dir)
+        fp_stats, q_stats, fp_model_perf, quantized_model_perf = optimize(weights_dir, dataset_dir)
+        
+        curr_res = {
+            "Model": model,
+            "TL": tf,
+            "imgsz": imgsz,
+            "epochs": epochs,
+            "batch": batch,
+            "dataset": dataset,
+            "optimizer": loss,
+            "lr": float("0."+lr),
+            "optimization_technique": "Floating-point",
+            "model_performance": fp_model_perf,
+            "stats": fp_stats
+        }
+
+        results.append(curr_res)
+
+        curr_res = {
+            "Model": model,
+            "TL": tf,
+            "imgsz": imgsz,
+            "epochs": epochs,
+            "batch": batch,
+            "dataset": dataset,
+            "optimizer": loss,
+            "lr": float("0."+lr),
+            "optimization_technique": "Quantized",
+            "model_performance": quantized_model_perf,
+            "stats": q_stats
+        }
+
+        results.append(curr_res)
+
+    import json
+    with open('optimization_results_on_rc.json', 'w') as fp:
+        json.dump(results, fp)
 
 
 
