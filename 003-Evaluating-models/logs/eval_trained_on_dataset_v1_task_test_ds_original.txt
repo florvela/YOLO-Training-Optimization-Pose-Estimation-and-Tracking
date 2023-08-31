@@ -1,0 +1,854 @@
+model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov5
+TF: no
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:51,  4.31s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:08<00:44,  4.08s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:11<00:37,  3.72s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:14<00:31,  3.52s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:17<00:27,  3.41s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:22<00:25,  3.66s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:26<00:22,  3.78s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:30<00:19,  3.95s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:35<00:16,  4.15s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:39<00:12,  4.27s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:44<00:09,  4.51s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:50<00:04,  4.92s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:53<00:00,  4.38s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:53<00:00,  4.12s/it]
+                   all        408        448      0.793      0.689      0.747      0.422
+                 knife        408        214      0.841      0.814      0.857      0.514
+                pistol        408        234      0.745      0.564      0.638      0.331
+Speed: 0.6ms pre-process, 128.0ms inference, 0.4ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov5_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov5
+TF: no
+Imgsz: 800
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:51,  4.29s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:07<00:39,  3.63s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:10<00:34,  3.42s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:13<00:29,  3.31s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:17<00:26,  3.28s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:21<00:25,  3.58s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:25<00:22,  3.73s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:29<00:19,  3.93s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:34<00:16,  4.15s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:38<00:12,  4.25s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:43<00:09,  4.51s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:49<00:04,  4.95s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.42s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.07s/it]
+                   all        408        448      0.737      0.625      0.701      0.358
+                 knife        408        214      0.767      0.734      0.795      0.443
+                pistol        408        234      0.707      0.517      0.607      0.272
+Speed: 0.5ms pre-process, 126.4ms inference, 0.5ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_001
+Model: yolov5
+TF: yolov5s
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 001
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_001/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_001, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:51,  4.29s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:07<00:39,  3.63s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:10<00:34,  3.41s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:13<00:29,  3.30s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:16<00:26,  3.28s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:21<00:24,  3.56s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:25<00:22,  3.71s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:29<00:19,  3.93s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:34<00:16,  4.15s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:38<00:12,  4.26s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:43<00:09,  4.53s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:49<00:04,  4.96s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.42s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.07s/it]
+                   all        408        448      0.692      0.603      0.665      0.333
+                 knife        408        214      0.759      0.715      0.777      0.416
+                pistol        408        234      0.626      0.491      0.552      0.249
+Speed: 0.5ms pre-process, 126.4ms inference, 0.6ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_0012[0m
+model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov5
+TF: yolov5s
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:51,  4.26s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:07<00:39,  3.60s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:10<00:33,  3.40s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:13<00:29,  3.32s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:16<00:26,  3.29s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:21<00:24,  3.56s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:25<00:22,  3.71s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:29<00:19,  3.91s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:34<00:16,  4.13s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:38<00:12,  4.25s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:43<00:09,  4.51s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:49<00:04,  4.94s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.41s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.06s/it]
+                   all        408        448      0.811       0.75      0.807      0.476
+                 knife        408        214      0.858      0.848       0.89      0.548
+                pistol        408        234      0.765      0.653      0.724      0.405
+Speed: 0.5ms pre-process, 126.3ms inference, 0.4ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_yolov5s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov5_tf_yolov5s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov5
+TF: yolov5s
+Imgsz: 640
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_yolov5s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_yolov5s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:51,  4.27s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:07<00:39,  3.61s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:10<00:33,  3.40s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:13<00:29,  3.30s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:16<00:26,  3.26s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:20<00:24,  3.53s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:24<00:22,  3.68s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:29<00:19,  3.88s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:33<00:16,  4.08s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:38<00:12,  4.20s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:43<00:08,  4.46s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:49<00:04,  4.90s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.36s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.03s/it]
+                   all        408        448      0.773      0.712      0.764      0.429
+                 knife        408        214       0.83      0.822      0.863      0.504
+                pistol        408        234      0.715      0.603      0.666      0.355
+Speed: 0.5ms pre-process, 125.1ms inference, 0.5ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_yolov5s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov5_tf_yolov5s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov5
+TF: yolov5s
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_yolov5s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_yolov5s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+Model summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:50,  4.24s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:07<00:39,  3.60s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:10<00:34,  3.40s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:13<00:29,  3.30s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:16<00:26,  3.26s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:20<00:24,  3.54s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:24<00:22,  3.69s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:29<00:19,  3.89s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:33<00:16,  4.11s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:38<00:12,  4.24s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:43<00:08,  4.49s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:49<00:04,  4.92s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.39s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.04s/it]
+                   all        408        448      0.854      0.745      0.807       0.49
+                 knife        408        214      0.911      0.862      0.901      0.575
+                pistol        408        234      0.796      0.628      0.714      0.405
+Speed: 0.5ms pre-process, 125.7ms inference, 0.4ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_yolov5s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov5_tf_yolov5s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov5
+TF: yolov5s
+Imgsz: 800
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+[34m[1mval: [0mdata=/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov5_original/data.yaml, weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov5_tf_yolov5s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], batch_size=32, imgsz=640, conf_thres=0.001, iou_thres=0.6, max_det=300, task=test, device=, workers=8, single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project=runs/val, name=model_yolov5_tf_yolov5s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01, exist_ok=False, half=False, dnn=False
+YOLOv5 🚀 v7.0-212-g9974d51 Python-3.10.9 torch-1.13.1 CPU
+
+Fusing layers... 
+custom_YOLOv5s summary: 182 layers, 7249215 parameters, 0 gradients
+
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov5_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   0%|          | 0/13 [00:00<?, ?it/s]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:   8%|▊         | 1/13 [00:04<00:51,  4.27s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  15%|█▌        | 2/13 [00:07<00:39,  3.62s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  23%|██▎       | 3/13 [00:10<00:33,  3.40s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  31%|███       | 4/13 [00:13<00:29,  3.31s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  38%|███▊      | 5/13 [00:16<00:26,  3.26s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  46%|████▌     | 6/13 [00:21<00:24,  3.54s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  54%|█████▍    | 7/13 [00:25<00:22,  3.70s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  62%|██████▏   | 8/13 [00:29<00:19,  3.90s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  69%|██████▉   | 9/13 [00:33<00:16,  4.13s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  77%|███████▋  | 10/13 [00:38<00:12,  4.24s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  85%|████████▍ | 11/13 [00:43<00:08,  4.50s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95:  92%|█████████▏| 12/13 [00:49<00:04,  4.94s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.40s/it]
+                 Class     Images  Instances          P          R      mAP50   mAP50-95: 100%|██████████| 13/13 [00:52<00:00,  4.05s/it]
+                   all        408        448      0.796      0.716      0.755      0.428
+                 knife        408        214      0.876      0.855      0.872      0.513
+                pistol        408        234      0.716      0.577      0.638      0.343
+Speed: 0.5ms pre-process, 125.9ms inference, 0.5ms NMS per image at shape (32, 3, 640, 640)
+Results saved to [1mruns/val/model_yolov5_tf_yolov5s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_001
+Model: yolov7
+TF: yolov7training
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 001
+YOLOR 🚀 v0.1-126-g84932d7 torch 1.13.1 CPU
+
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+/Users/florenciavela/anaconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3191.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 314 layers, 36487166 parameters, 6194944 gradients, 103.2 GFLOPS
+Namespace(weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_001/weights/best.pt'], data='/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov7_original/data.yaml', batch_size=32, img_size=640, conf_thres=0.001, iou_thres=0.65, task='test', device='', single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project='runs/test', name='model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_001', exist_ok=False, no_trace=False, v5_metric=False)
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+IDetect.fuse
+ Convert model to Traced-model... 
+ traced_script_module saved! 
+ model is traced! 
+
+
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|          | 0/13 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   8%|▊         | 1/13 [00:16<03:15, 16.25s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  15%|█▌        | 2/13 [00:31<02:52, 15.66s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  23%|██▎       | 3/13 [00:46<02:34, 15.46s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  31%|███       | 4/13 [01:01<02:18, 15.38s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  38%|███▊      | 5/13 [01:17<02:02, 15.32s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  46%|████▌     | 6/13 [01:36<01:55, 16.54s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  54%|█████▍    | 7/13 [01:54<01:43, 17.22s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  62%|██████▏   | 8/13 [02:14<01:30, 18.05s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  69%|██████▉   | 9/13 [02:35<01:16, 19.06s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  77%|███████▋  | 10/13 [02:56<00:59, 19.67s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  85%|████████▍ | 11/13 [03:20<00:41, 20.86s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  92%|█████████▏| 12/13 [03:48<00:23, 23.01s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:02<00:00, 20.37s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:02<00:00, 18.67s/it]
+                 all         408         448        0.87       0.904       0.914        0.64
+               knife         408         214       0.923       0.953       0.958       0.687
+              pistol         408         234       0.816       0.855        0.87       0.593
+Speed: 591.5/0.3/591.8 ms inference/NMS/total per 640x640 image at batch-size 32
+Results saved to runs/test/model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_0012
+model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov7
+TF: yolov7training
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+YOLOR 🚀 v0.1-126-g84932d7 torch 1.13.1 CPU
+
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+/Users/florenciavela/anaconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3191.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 314 layers, 36487166 parameters, 6194944 gradients, 103.2 GFLOPS
+Namespace(weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01/weights/best.pt'], data='/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov7_original/data.yaml', batch_size=32, img_size=640, conf_thres=0.001, iou_thres=0.65, task='test', device='', single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project='runs/test', name='model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01', exist_ok=False, no_trace=False, v5_metric=False)
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+IDetect.fuse
+ Convert model to Traced-model... 
+ traced_script_module saved! 
+ model is traced! 
+
+
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|          | 0/13 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   8%|▊         | 1/13 [00:16<03:14, 16.25s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  15%|█▌        | 2/13 [00:31<02:52, 15.65s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  23%|██▎       | 3/13 [00:46<02:34, 15.41s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  31%|███       | 4/13 [01:01<02:17, 15.28s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  38%|███▊      | 5/13 [01:16<02:02, 15.28s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  46%|████▌     | 6/13 [01:35<01:55, 16.52s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  54%|█████▍    | 7/13 [01:54<01:43, 17.22s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  62%|██████▏   | 8/13 [02:14<01:30, 18.09s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  69%|██████▉   | 9/13 [02:35<01:16, 19.08s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  77%|███████▋  | 10/13 [02:56<00:59, 19.69s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  85%|████████▍ | 11/13 [03:20<00:41, 20.86s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  92%|█████████▏| 12/13 [03:48<00:23, 23.10s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:02<00:00, 20.44s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:02<00:00, 18.68s/it]
+                 all         408         448       0.874       0.849       0.881       0.624
+               knife         408         214       0.934       0.924       0.955       0.666
+              pistol         408         234       0.814       0.774       0.806       0.581
+Speed: 592.1/0.3/592.4 ms inference/NMS/total per 640x640 image at batch-size 32
+Results saved to runs/test/model_yolov7_tf_yolov7training_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012
+model_yolov7_tf_yolov7training_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_001
+Model: yolov7
+TF: yolov7training
+Imgsz: 640
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 001
+YOLOR 🚀 v0.1-126-g84932d7 torch 1.13.1 CPU
+
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+/Users/florenciavela/anaconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3191.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 314 layers, 36487166 parameters, 6194944 gradients, 103.2 GFLOPS
+Namespace(weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov7_tf_yolov7training_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_001/weights/best.pt'], data='/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov7_original/data.yaml', batch_size=32, img_size=640, conf_thres=0.001, iou_thres=0.65, task='test', device='', single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project='runs/test', name='model_yolov7_tf_yolov7training_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_001', exist_ok=False, no_trace=False, v5_metric=False)
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+IDetect.fuse
+ Convert model to Traced-model... 
+ traced_script_module saved! 
+ model is traced! 
+
+
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|          | 0/13 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   8%|▊         | 1/13 [00:16<03:12, 16.08s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  15%|█▌        | 2/13 [00:31<02:50, 15.50s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  23%|██▎       | 3/13 [00:46<02:32, 15.27s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  31%|███       | 4/13 [01:01<02:17, 15.26s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  38%|███▊      | 5/13 [01:16<02:01, 15.20s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  46%|████▌     | 6/13 [01:35<01:55, 16.49s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  54%|█████▍    | 7/13 [01:54<01:43, 17.22s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  62%|██████▏   | 8/13 [02:14<01:30, 18.04s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  69%|██████▉   | 9/13 [02:34<01:15, 18.95s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  77%|███████▋  | 10/13 [02:55<00:58, 19.58s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  85%|████████▍ | 11/13 [03:19<00:41, 20.79s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  92%|█████████▏| 12/13 [03:47<00:23, 23.05s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:02<00:00, 20.43s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:02<00:00, 18.63s/it]
+                 all         408         448       0.839       0.902       0.907       0.626
+               knife         408         214       0.904       0.953       0.956       0.664
+              pistol         408         234       0.774        0.85       0.858       0.588
+Speed: 590.3/0.3/590.6 ms inference/NMS/total per 640x640 image at batch-size 32
+Results saved to runs/test/model_yolov7_tf_yolov7training_imgsz_640_epochs_50_batch_16_dataset_v1_loss_SGD_lr_0012
+model_yolov7_tf_yolov7training_imgsz_800_epochs_100_batch_8_dataset_v1_loss_SGD_lr_01
+Model: yolov7
+TF: yolov7training
+Imgsz: 800
+Epochs: 100
+Batch: 8
+Dataset: v1
+Loss: SGD
+Lr0: 01
+YOLOR 🚀 v0.1-126-g84932d7 torch 1.13.1 CPU
+
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+/Users/florenciavela/anaconda3/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:3191.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 314 layers, 36487166 parameters, 6194944 gradients, 103.2 GFLOPS
+Namespace(weights=['/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../002-Training-models/train_results/model_yolov7_tf_yolov7training_imgsz_800_epochs_100_batch_8_dataset_v1_loss_SGD_lr_01/weights/best.pt'], data='/Users/florenciavela/Desktop/flor/git/gun-detection/003-Evaluating-models/../datasets/yolov7_original/data.yaml', batch_size=32, img_size=640, conf_thres=0.001, iou_thres=0.65, task='test', device='', single_cls=False, augment=False, verbose=False, save_txt=False, save_hybrid=False, save_conf=False, save_json=False, project='runs/test', name='model_yolov7_tf_yolov7training_imgsz_800_epochs_100_batch_8_dataset_v1_loss_SGD_lr_01', exist_ok=False, no_trace=False, v5_metric=False)
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+IDetect.fuse
+ Convert model to Traced-model... 
+ traced_script_module saved! 
+ model is traced! 
+
+
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mtest: [0mScanning '/Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov7_original/test/labels.cache' images and labels... 408 found, 0 missing, 17 empty, 0 corrupted: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   0%|          | 0/13 [00:00<?, ?it/s]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:   8%|▊         | 1/13 [00:16<03:14, 16.17s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  15%|█▌        | 2/13 [00:31<02:51, 15.57s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  23%|██▎       | 3/13 [00:46<02:34, 15.41s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  31%|███       | 4/13 [01:01<02:18, 15.34s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  38%|███▊      | 5/13 [01:16<02:02, 15.30s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  46%|████▌     | 6/13 [01:35<01:55, 16.48s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  54%|█████▍    | 7/13 [01:54<01:42, 17.12s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  62%|██████▏   | 8/13 [02:14<01:30, 18.05s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  69%|██████▉   | 9/13 [02:35<01:16, 19.02s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  77%|███████▋  | 10/13 [02:56<00:58, 19.63s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  85%|████████▍ | 11/13 [03:19<00:41, 20.79s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95:  92%|█████████▏| 12/13 [03:47<00:22, 22.93s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:01<00:00, 20.31s/it]
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 100%|██████████| 13/13 [04:01<00:00, 18.61s/it]
+                 all         408         448       0.856       0.808       0.858       0.583
+               knife         408         214       0.913       0.883       0.939       0.633
+              pistol         408         234       0.799       0.733       0.777       0.534
+Speed: 589.8/0.3/590.1 ms inference/NMS/total per 640x640 image at batch-size 32
+Results saved to runs/test/model_yolov7_tf_yolov7training_imgsz_800_epochs_100_batch_8_dataset_v1_loss_SGD_lr_012
+model_yolov8_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov8
+TF: no
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 3006038 parameters, 0 gradients, 8.1 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:01<00:39,  1.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:03<00:37,  1.56s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:04<00:35,  1.55s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:06<00:33,  1.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:07<00:31,  1.52s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:09<00:30,  1.52s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:10<00:28,  1.51s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:12<00:27,  1.51s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:13<00:25,  1.51s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:15<00:23,  1.49s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:16<00:23,  1.55s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:18<00:22,  1.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:20<00:20,  1.57s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:21<00:19,  1.61s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:23<00:18,  1.67s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [00:25<00:16,  1.66s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [00:26<00:15,  1.69s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [00:28<00:14,  1.76s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [00:30<00:12,  1.78s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [00:32<00:10,  1.80s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [00:34<00:09,  1.86s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [00:36<00:07,  1.93s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [00:39<00:06,  2.07s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [00:41<00:04,  2.12s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [00:43<00:02,  2.02s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [00:44<00:00,  1.70s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [00:44<00:00,  1.69s/it]
+                   all        408        448      0.871      0.776      0.846      0.599
+                 knife        408        214       0.92      0.861      0.925      0.657
+                pistol        408        234      0.822      0.691      0.767      0.542
+Speed: 1.3ms preprocess, 95.8ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov8_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov8
+TF: no
+Imgsz: 800
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 3006038 parameters, 0 gradients, 8.1 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:01<00:39,  1.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:03<00:37,  1.56s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:04<00:35,  1.54s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:06<00:33,  1.54s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:07<00:32,  1.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:09<00:30,  1.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:10<00:29,  1.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:12<00:27,  1.52s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:13<00:25,  1.52s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:15<00:24,  1.50s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:16<00:23,  1.56s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:18<00:22,  1.61s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:20<00:20,  1.60s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:21<00:19,  1.62s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:23<00:18,  1.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [00:25<00:16,  1.67s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [00:27<00:15,  1.71s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [00:29<00:14,  1.78s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [00:30<00:12,  1.80s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [00:32<00:10,  1.82s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [00:34<00:09,  1.88s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [00:36<00:07,  1.95s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [00:39<00:06,  2.09s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [00:41<00:04,  2.14s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [00:43<00:02,  2.03s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [00:44<00:00,  1.70s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [00:44<00:00,  1.71s/it]
+                   all        408        448      0.842      0.744      0.841      0.579
+                 knife        408        214      0.869      0.869      0.928      0.617
+                pistol        408        234      0.815       0.62      0.754      0.541
+Speed: 1.4ms preprocess, 96.6ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov8_tf_yolov8l_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8l
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 268 layers, 43608150 parameters, 0 gradients, 164.8 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:16<06:46, 16.26s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:32<06:24, 16.02s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:48<06:07, 15.98s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [01:03<05:49, 15.91s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [01:19<05:33, 15.86s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [01:35<05:16, 15.84s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [01:51<05:00, 15.82s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [02:06<04:44, 15.79s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [02:22<04:28, 15.78s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [02:38<04:12, 15.79s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [02:56<04:06, 16.43s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [03:15<04:00, 17.19s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [03:33<03:49, 17.63s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [03:52<03:35, 17.99s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [04:11<03:20, 18.26s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [04:30<03:03, 18.40s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [04:50<02:49, 18.86s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [05:12<02:38, 19.83s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [05:34<02:23, 20.46s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [05:56<02:05, 20.95s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [06:19<01:47, 21.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [06:43<01:29, 22.34s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [07:11<01:12, 24.10s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [07:39<00:50, 25.24s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [07:59<00:23, 23.61s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [08:08<00:00, 19.25s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [08:08<00:00, 18.79s/it]
+                   all        408        448      0.867      0.758      0.838      0.597
+                 knife        408        214      0.916      0.861      0.919      0.655
+                pistol        408        234      0.819      0.654      0.757      0.539
+Speed: 1.1ms preprocess, 1186.0ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8l_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_Adam_lr_001
+Model: yolov8
+TF: yolov8s
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: Adam
+Lr0: 001
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 11126358 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:02<00:59,  2.39s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:04<00:54,  2.26s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:06<00:51,  2.22s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:08<00:48,  2.21s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:11<00:45,  2.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:13<00:43,  2.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:15<00:41,  2.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:17<00:39,  2.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:19<00:36,  2.15s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:21<00:34,  2.14s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:24<00:34,  2.33s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:27<00:33,  2.42s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:29<00:32,  2.47s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:32<00:30,  2.55s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:35<00:28,  2.62s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [00:38<00:27,  2.73s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [00:41<00:24,  2.75s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [00:44<00:22,  2.86s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [00:47<00:20,  2.89s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [00:50<00:17,  2.91s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [00:53<00:15,  3.03s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [00:56<00:12,  3.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [01:00<00:10,  3.40s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [01:04<00:07,  3.51s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [01:07<00:03,  3.33s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:08<00:00,  2.78s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:08<00:00,  2.65s/it]
+                   all        408        448      0.852      0.796      0.849      0.616
+                 knife        408        214      0.878      0.874      0.912      0.649
+                pistol        408        234      0.826      0.718      0.786      0.584
+Speed: 0.6ms preprocess, 161.3ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_Adam_lr_0012[0m
+model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 640
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 11126358 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:02<01:00,  2.40s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:04<00:55,  2.30s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:06<00:51,  2.24s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:08<00:48,  2.22s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:11<00:45,  2.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:13<00:43,  2.19s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:15<00:41,  2.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:17<00:38,  2.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:19<00:36,  2.15s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:21<00:34,  2.14s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:24<00:35,  2.34s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:27<00:34,  2.43s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:29<00:32,  2.48s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:32<00:30,  2.55s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:35<00:28,  2.63s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [00:38<00:27,  2.73s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [00:41<00:24,  2.76s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [00:44<00:22,  2.87s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [00:47<00:20,  2.90s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [00:50<00:17,  2.92s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [00:53<00:15,  3.04s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [00:57<00:12,  3.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [01:01<00:10,  3.43s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [01:04<00:07,  3.54s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [01:07<00:03,  3.36s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:09<00:00,  2.80s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:09<00:00,  2.67s/it]
+                   all        408        448      0.888      0.777       0.86      0.623
+                 knife        408        214      0.927      0.833      0.927      0.661
+                pistol        408        234      0.849       0.72      0.793      0.585
+Speed: 0.6ms preprocess, 162.1ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov8_tf_yolov8s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_Adam_lr_001
+Model: yolov8
+TF: yolov8s
+Imgsz: 640
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: Adam
+Lr0: 001
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 11126358 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:02<00:59,  2.39s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:04<00:55,  2.30s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:06<00:51,  2.25s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:08<00:48,  2.22s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:11<00:46,  2.22s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:13<00:43,  2.19s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:15<00:41,  2.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:17<00:38,  2.15s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:19<00:36,  2.15s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:21<00:34,  2.15s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:24<00:35,  2.34s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:27<00:34,  2.43s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:29<00:32,  2.48s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:32<00:30,  2.57s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:35<00:29,  2.64s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [00:38<00:27,  2.74s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [00:41<00:24,  2.76s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [00:44<00:22,  2.87s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [00:47<00:20,  2.89s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [00:50<00:17,  2.91s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [00:53<00:15,  3.03s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [00:57<00:12,  3.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [01:01<00:10,  3.42s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [01:04<00:07,  3.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [01:07<00:03,  3.34s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:09<00:00,  2.79s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:09<00:00,  2.66s/it]
+                   all        408        448      0.868      0.782      0.857      0.595
+                 knife        408        214        0.9       0.86      0.926      0.653
+                pistol        408        234      0.836      0.705      0.789      0.537
+Speed: 0.7ms preprocess, 161.8ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_Adam_lr_0012[0m
+model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 100
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 11126358 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:03<01:32,  3.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:07<01:27,  3.65s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:10<01:23,  3.63s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:14<01:19,  3.62s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:18<01:15,  3.60s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:21<01:11,  3.60s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:25<01:08,  3.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:28<01:04,  3.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:32<01:00,  3.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:35<00:57,  3.59s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:40<00:56,  3.74s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:44<00:54,  3.87s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:48<00:50,  3.90s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:52<00:47,  3.98s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:56<00:44,  4.07s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [01:00<00:40,  4.08s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [01:05<00:37,  4.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [01:10<00:35,  4.39s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [01:14<00:31,  4.48s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [01:19<00:27,  4.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [01:24<00:23,  4.68s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [01:29<00:19,  4.84s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [01:35<00:15,  5.18s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [01:41<00:10,  5.38s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [01:45<00:05,  5.07s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:47<00:00,  4.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:47<00:00,  4.15s/it]
+                   all        408        448      0.877      0.756      0.844      0.612
+                 knife        408        214      0.914      0.849      0.928      0.675
+                pistol        408        234       0.84      0.662       0.76      0.548
+Speed: 1.4ms preprocess, 252.0ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_012[0m
+model_yolov8_tf_yolov8s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_01
+Model: yolov8
+TF: yolov8s
+Imgsz: 800
+Epochs: 50
+Batch: 16
+Dataset: v1
+Loss: SGD
+Lr0: 01
+Ultralytics YOLOv8.0.150 🚀 Python-3.10.9 torch-1.13.1 CPU (Apple M2)
+[W NNPACK.cpp:53] Could not initialize NNPACK! Reason: Unsupported hardware.
+Model summary (fused): 168 layers, 11126358 parameters, 0 gradients, 28.4 GFLOPs
+
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+[34m[1mval: [0mScanning /Users/florenciavela/Desktop/flor/git/gun-detection/datasets/yolov8_original/test/labels.cache... 408 images, 17 backgrounds, 0 corrupt: 100%|██████████| 408/408 [00:00<?, ?it/s]
+
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   0%|          | 0/26 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   4%|▍         | 1/26 [00:03<01:31,  3.67s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):   8%|▊         | 2/26 [00:07<01:26,  3.62s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  12%|█▏        | 3/26 [00:10<01:22,  3.60s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  15%|█▌        | 4/26 [00:14<01:19,  3.60s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  19%|█▉        | 5/26 [00:17<01:15,  3.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  23%|██▎       | 6/26 [00:21<01:11,  3.58s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  27%|██▋       | 7/26 [00:25<01:07,  3.57s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  31%|███       | 8/26 [00:28<01:04,  3.57s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  35%|███▍      | 9/26 [00:32<01:00,  3.57s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  38%|███▊      | 10/26 [00:35<00:56,  3.55s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  42%|████▏     | 11/26 [00:39<00:55,  3.71s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  46%|████▌     | 12/26 [00:43<00:53,  3.84s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  50%|█████     | 13/26 [00:47<00:50,  3.89s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  54%|█████▍    | 14/26 [00:52<00:47,  3.96s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  58%|█████▊    | 15/26 [00:56<00:44,  4.06s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  62%|██████▏   | 16/26 [01:00<00:40,  4.06s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  65%|██████▌   | 17/26 [01:04<00:37,  4.16s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  69%|██████▉   | 18/26 [01:09<00:34,  4.36s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  73%|███████▎  | 19/26 [01:14<00:31,  4.45s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  77%|███████▋  | 20/26 [01:19<00:27,  4.53s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  81%|████████  | 21/26 [01:24<00:23,  4.67s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  85%|████████▍ | 22/26 [01:29<00:19,  4.83s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  88%|████████▊ | 23/26 [01:35<00:15,  5.17s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  92%|█████████▏| 24/26 [01:40<00:10,  5.35s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95):  96%|█████████▌| 25/26 [01:45<00:05,  5.05s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:47<00:00,  4.14s/it]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 26/26 [01:47<00:00,  4.13s/it]
+                   all        408        448      0.864      0.776      0.852      0.583
+                 knife        408        214      0.889      0.869      0.932      0.643
+                pistol        408        234      0.839      0.684      0.772      0.523
+Speed: 1.4ms preprocess, 250.7ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to [1mruns/detect/model_yolov8_tf_yolov8s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_012[0m

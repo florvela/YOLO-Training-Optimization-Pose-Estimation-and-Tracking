@@ -165,5 +165,9 @@ videos_for_testing/
 003-Evaluating-models/trained_on_v1/yolov7_runs/*
 003-Evaluating-models/trained_on_v1/yolov8_runs/*
 003-Evaluating-models/trained_on_v2/yolov8
+003-Evaluating-models/yolov5
+003-Evaluating-models/yolov7
+003-Evaluating-models/yolov8
 003-Evaluating-models/eval_on_randomized_clips/yolov8
 003-Evaluating-models/eval_on_randomized_clips_c/yolov8
+002-Training-models/model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_rc_loss_SGD_lr_01/

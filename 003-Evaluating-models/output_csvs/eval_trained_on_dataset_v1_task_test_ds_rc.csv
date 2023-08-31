@@ -1,0 +1,9 @@
+model_key,model,transfer_learning,imgsz,epochs,batch,dataset,optimizer,lr0,all_P,all_R,all_F1,all_mAP@.5,all_mAP@.5:.95,pistol_P,pistol_R,pistol_F1,pistol_mAP@.5,pistol_mAP@.5:.95
+model_yolov8_tf_no_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_013,yolov8,no,800,100,16,v1,SGD,0.01,0.137,0.117,0.06310629921259843,0.0488,0.0198,0.137,0.117,0.06310629921259843,0.0488,0.0198
+model_yolov8_tf_no_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_013,yolov8,no,800,50,16,v1,SGD,0.01,0.135,0.129,0.06596590909090909,0.0542,0.0202,0.135,0.129,0.06596590909090909,0.0542,0.0202
+model_yolov8_tf_yolov8l_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_013,yolov8,yolov8l,800,100,16,v1,SGD,0.01,0.157,0.127,0.07020774647887323,0.0615,0.0261,0.157,0.127,0.07020774647887323,0.0615,0.0261
+model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_Adam_lr_0013,yolov8,yolov8s,640,100,16,v1,Adam,0.001,0.323,0.11,0.0820554272517321,0.0976,0.0334,0.323,0.11,0.0820554272517321,0.0976,0.0334
+model_yolov8_tf_yolov8s_imgsz_640_epochs_100_batch_16_dataset_v1_loss_SGD_lr_013,yolov8,yolov8s,640,100,16,v1,SGD,0.01,0.159,0.107,0.06395864661654135,0.0484,0.0199,0.159,0.107,0.06395864661654135,0.0484,0.0199
+model_yolov8_tf_yolov8s_imgsz_640_epochs_50_batch_16_dataset_v1_loss_Adam_lr_0013,yolov8,yolov8s,640,50,16,v1,Adam,0.001,0.124,0.155,0.06888888888888889,0.0665,0.0257,0.124,0.155,0.06888888888888889,0.0665,0.0257
+model_yolov8_tf_yolov8s_imgsz_800_epochs_100_batch_16_dataset_v1_loss_SGD_lr_013,yolov8,yolov8s,800,100,16,v1,SGD,0.01,0.222,0.118,0.07704705882352943,0.0726,0.0307,0.222,0.118,0.07704705882352943,0.0726,0.0307
+model_yolov8_tf_yolov8s_imgsz_800_epochs_50_batch_16_dataset_v1_loss_SGD_lr_013,yolov8,yolov8s,800,50,16,v1,SGD,0.01,0.216,0.176,0.09697959183673467,0.0859,0.0296,0.216,0.176,0.09697959183673467,0.0859,0.0296
