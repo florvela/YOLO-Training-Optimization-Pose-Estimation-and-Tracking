@@ -72,7 +72,7 @@ def serve_video(filename):
 def show_result(video_name):
     data = read_json_file("data.json")
     processed_video_path = os.path.join(app.config['RESULTS_FOLDER'], video_name)
-    return render_template('result.html', video_name=video_name, method=data[video_name], processed_video_path=processed_video_path)
+    return render_template('result.html', video_name=video_name, data=data, processed_video_path=processed_video_path)
 
 
 if __name__ == '__main__':

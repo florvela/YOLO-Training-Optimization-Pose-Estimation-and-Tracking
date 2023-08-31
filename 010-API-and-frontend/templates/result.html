@@ -2,11 +2,51 @@
 <html>
 <head>
     <title>Gun Detection - Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        form {
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        label, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Gun Detection - Result</h1>
-    <h2>Original Video: {{ video_name }}</h2>
-    <h2>Method: {{ method }}</h2>
+    <p><strong>Original Video:</strong> {{ video_name }}</p>
+    <p><strong>Tracking method:</strong> {{ data[video_name]["method"] }}</p>
     <video width="640" height="480" controls muted>
         <source src="{{ url_for('serve_video', filename=video_name) }}" type="video/mp4">
         <source src="{{ url_for('serve_video', filename=video_name) }}" type="video/ogg">

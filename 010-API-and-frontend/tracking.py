@@ -128,15 +128,20 @@ def process_video_with_detection(video_path, output_directory="static/results", 
 
     file_path = 'data.json'
     data = read_json_file(file_path)
+
+    tracking_data = dict()
     if method == "nearby-hand":
-        data[new_video_name] = "Tracked person with the closest wrist to detected guns"
+        tracking_data["method"] = "Tracked person with the closest wrist to detected guns"
     else:
-        data[new_video_name] = "Track person with the bounding boxes near detected guns"
+        tracking_data["method"] = "Track person with the bounding boxes near detected guns"
+    tracking_data["optimized"] = False
+
+    data[new_video_name] = tracking_data
 
     write_json_file(file_path, data)
 
     # gun_model = YOLO('yolov8n.pt')
-    gun_model = YOLO(os.path.join(os.getcwd(),'weights/guns.pt'))
+    gun_model = YOLO(os.path.join(os.getcwd(),'weights/model2.pt'))
     gun_model.fuse()
 
     # model = YOLO(os.path.join(os.getcwd(),'weights/yolov8n-pose.pt'))
@@ -242,7 +247,6 @@ def process_video_with_detection(video_path, output_directory="static/results", 
                 frame = box_annotator.annotate(frame=frame, detections=detections2, labels=labels)
 
                 sink.write_frame(frame)
-            sink.writer.release()
         else:
             for frame in tqdm(generator, total=video_info.total_frames):
                 counter += 1
@@ -319,4 +323,6 @@ def process_video_with_detection(video_path, output_directory="static/results", 
                 frame = box_annotator.annotate(frame=frame, detections=detections2, labels=labels)
 
                 sink.write_frame(frame)
+
+        sink.writer.release()
 
