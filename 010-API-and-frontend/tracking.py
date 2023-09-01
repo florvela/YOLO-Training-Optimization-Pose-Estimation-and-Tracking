@@ -52,7 +52,7 @@ gun_model.fuse()
 
 def prepare_openvino_model(model: YOLO, model_name: str, weights_dir: str) -> Tuple[ov.Model, Path]:
     model_path = Path(f"{weights_dir}/{model_name}_openvino_model/{model_name}.xml")
-    model.export(format="openvino", dynamic=True, half=False)
+    # model.export(format="openvino", dynamic=True, half=False)
 
     model = ov.Core().read_model(model_path)
     return model, model_path
@@ -65,6 +65,11 @@ det_ov_model = core.read_model(det_model_path)
 if device != "CPU":
     det_ov_model.reshape({0: [1, 3, 640, 640]})
 det_compiled_model = core.compile_model(det_ov_model, device)
+
+quantized_model_path = Path(f"{weights_dir}/{MODEL_NAME}_openvino_model/{MODEL_NAME}_quantized.xml")
+quantized_det_ov_model = core.read_model(quantized_model_path)
+quantized_det_compiled_model = core.compile_model(quantized_det_ov_model, device)
+
 
 
 def plot_one_box(box:np.ndarray, img:np.ndarray, color:Tuple[int, int, int] = None, mask:np.ndarray = None, label:str = None, line_thickness:int = 5):
@@ -426,12 +431,90 @@ def process_video_with_detection(video_path, output_directory="static/results", 
 
     counter = 0
     # method = "nearby-hand-ov"
+    # method = "nearby-hand-q"
 
 
     with VideoSink(TARGET_VIDEO_PATH, video_info) as sink:
         pose_speed = list()
         det_speed = list()
-        if method == "nearby-hand-ov":
+        if method == "nearby-hand-q":
+            # loop over video frames
+            for frame in tqdm(generator, total=video_info.total_frames):
+                counter += 1
+                print(f"{counter}/{video_info.total_frames}")
+
+                input_image = np.array(frame)
+                start = time.time()
+                gun_results = detect(input_image, quantized_det_compiled_model)[0]
+                end = time.time()
+                det_speed.append((end - start)*1000)
+
+                # model prediction on single frame and conversion to supervision Detections
+                results = model(frame, conf=0.7) #, verbose=False)
+                frame = results[0].plot(boxes=False)
+                speed = results[0].speed
+                pose_speed.append(speed['preprocess'] + speed['inference'] + speed['postprocess'])
+
+
+                detections = Detections(
+                    xyxy=results[0].boxes.xyxy.cpu().numpy(),
+                    confidence=results[0].boxes.conf.cpu().numpy(),
+                    class_id=results[0].boxes.cls.cpu().numpy().astype(int)
+                )
+                
+                # filtering out detections with unwanted classes
+                mask = np.array([class_id in POSE_INTEREST_IDS for class_id in detections.class_id], dtype=bool)
+                detections.filter(mask=mask, inplace=True)
+
+                # tracking detections
+                tracks = byte_tracker.update(
+                    output_results=detections2boxes(detections=detections),
+                    img_info=frame.shape,
+                    img_size=frame.shape
+                )
+                tracker_id = match_detections_with_tracks(detections=detections, tracks=tracks)
+                detections.tracker_id = np.array(tracker_id)
+
+                keep_track = list()
+                if len(gun_results["det"]) and len(results[0]):
+                    # coordenadas x,y de las munecas son 10 y 9
+                    result_hand_keypoints = [sub_array[[9,10]] for sub_array in results[0].keypoints.xy]
+
+                    for bounding_box in gun_results["det"]:
+                        keep_track.append(find_closest_keypoint(result_hand_keypoints, bounding_box[0:4]))
+
+                if len(detections.tracker_id):
+                    for tracker_id in detections.tracker_id[keep_track]:
+                        track_true.add(tracker_id)
+
+                mask = np.array([tracker_id is not None and tracker_id in track_true for tracker_id in detections.tracker_id], dtype=bool)
+                detections.filter(mask=mask, inplace=True)
+
+                labels = [
+                    f"#{tracker_id} {confidence:0.2f}"
+                    for _, confidence, class_id, tracker_id
+                    in detections
+                ]
+                # annotate and display frame
+                frame = box_annotator.annotate(frame=frame, detections=detections, labels=labels)
+
+                ### Anotar las guns!!!! 
+                if len(gun_results["det"]):
+                    for res in gun_results["det"]:
+                        detections2 = Detections(
+                            xyxy=res[0:4].cpu().numpy().reshape(1, 4),
+                            confidence=res[4].cpu().numpy().reshape(1),
+                            class_id=res[5].cpu().numpy().astype(int).reshape(1)
+                        )
+                        labels = [
+                            f"gun {confidence:0.2f}"
+                            for _, confidence, class_id, _
+                            in detections2
+                        ]
+                        frame = box_annotator.annotate(frame=frame, detections=detections2, labels=labels)
+
+                sink.write_frame(frame)
+        elif method == "nearby-hand-ov":
             # loop over video frames
             for frame in tqdm(generator, total=video_info.total_frames):
                 counter += 1

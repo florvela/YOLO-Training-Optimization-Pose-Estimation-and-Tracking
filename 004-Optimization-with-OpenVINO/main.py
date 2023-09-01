@@ -174,28 +174,29 @@ def optimize(weights_dir, dataset_dir):
     
     # Quantize mode in OpenVINO representation
     quantized_model = quantize(ov_model, data_loader, validator)
-    quantized_model_path = Path(f"{ROOT}/{MODEL_NAME}_openvino_model/{MODEL_NAME}_quantized.xml")
+    quantized_model_path = Path(f"{weights_dir}/{MODEL_NAME}_openvino_model/{MODEL_NAME}_quantized.xml")
     ov.serialize(quantized_model, str(quantized_model_path))
 
-    # Validate FP32 model
-    fp_stats, total_images, total_objects = validate(ov_model, tqdm(data_loader), validator)
-    print("Floating-point model validation results:")
-    print_statistics(fp_stats, total_images, total_objects)
+    # # Validate FP32 model
+    # fp_stats, total_images, total_objects = validate(ov_model, tqdm(data_loader), validator)
+    # print("Floating-point model validation results:")
+    # print_statistics(fp_stats, total_images, total_objects)
 
-    # Validate quantized model
-    q_stats, total_images, total_objects = validate(quantized_model, tqdm(data_loader), validator)
-    print("Quantized model validation results:")
-    print_statistics(q_stats, total_images, total_objects)
+    # # Validate quantized model
+    # q_stats, total_images, total_objects = validate(quantized_model, tqdm(data_loader), validator)
+    # print("Quantized model validation results:")
+    # print_statistics(q_stats, total_images, total_objects)
 
-    # Benchmark performance of FP32 model
-    fp_model_perf = benchmark_performance(ov_model_path, args)
-    print(f"Floating-point model performance: {fp_model_perf} FPS")
+    # # Benchmark performance of FP32 model
+    # fp_model_perf = benchmark_performance(ov_model_path, args)
+    # print(f"Floating-point model performance: {fp_model_perf} FPS")
 
-    # Benchmark performance of quantized model
-    quantized_model_perf = benchmark_performance(quantized_model_path, args)
-    print(f"Quantized model performance: {quantized_model_perf} FPS")
+    # # Benchmark performance of quantized model
+    # quantized_model_perf = benchmark_performance(quantized_model_path, args)
+    # print(f"Quantized model performance: {quantized_model_perf} FPS")
 
-    return fp_stats, q_stats, fp_model_perf, quantized_model_perf
+    # return fp_stats, q_stats, fp_model_perf, quantized_model_perf
+    return True,True,True,True
 
 
 def main():
@@ -264,9 +265,9 @@ def main():
 
         results.append(curr_res)
 
-    import json
-    with open('optimization_results_on_rc.json', 'w') as fp:
-        json.dump(results, fp)
+    # import json
+    # with open('optimization_results_on_rc.json', 'w') as fp:
+    #     json.dump(results, fp)
 
 
 

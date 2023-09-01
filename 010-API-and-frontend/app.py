@@ -50,7 +50,7 @@ def upload_video():
         # Process the video and detect guns with the selected method
         processed_video_path = process_video(video_path, method)
 
-        return redirect(url_for('show_result', video_name=video_file.filename))
+        return redirect(url_for('show_result', video_name=video_file.filename.replace(".mp4",f"_{method}.mp4")))
 
     return redirect(url_for('index'))
 
