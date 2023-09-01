@@ -55,19 +55,21 @@
         <select id="method" name="method">
             <option value="nearby-hand">Track person with the closest wrist to detected guns</option>
             <option value="touching-boxes">Track person with the bounding boxes near detected guns</option>
+            <option value="nearby-hand-ov">Track person with the closest wrist to detected guns (Optimized with OpenVINO)</option>
         </select>
         <input type="submit" value="Upload Video">
     </form>
 
     <!-- Form to stream from the webcam -->
-    <h2>Stream Webcam</h2>
+    <!-- <h2>Stream Webcam</h2>
     <form action="{{ url_for('upload_video') }}" method="post">
         <label for="method">Choose a tracking method:</label>
         <select id="method" name="method">
             <option value="nearby-hand">Track person with the closest wrist to detected guns</option>
+            <option value="nearby-hand-ov">Optimized with OpenVINO: Track person with the closest wrist to detected guns</option>
             <option value="touching-boxes">Track person with the bounding boxes near detected guns</option>
         </select>
         <input type="submit" value="Stream Webcam">
-    </form>
+    </form> -->
 </body>
 </html>
