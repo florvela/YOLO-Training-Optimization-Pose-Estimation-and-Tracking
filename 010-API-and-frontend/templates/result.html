@@ -41,15 +41,22 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        p {
+        	margin: 0; /* Reset margin to remove extra spacing */
+    		margin-top: 10px;
+    	}
     </style>
 </head>
 <body>
     <h1>Gun Detection - Result</h1>
-    <p><strong>Original Video:</strong> {{ video_name }}</p>
+    <p><strong>Original Video:</strong> {{ data[video_name]["video_name"] }}</p>
     <p><strong>Tracking method:</strong> {{ data[video_name]["method"] }}</p>
+    <p><strong>Optimization method:</strong> {{ data[video_name]["optim_method"] }}</p>
+    <p><strong>Pose model speed (ms):</strong> {{ data[video_name]["pose_average_speed(ms)"] }}</p>
+    <p><strong>Detection model speed (ms):</strong> {{ data[video_name]["det_average_speed(ms)"] }}</p>
     <video width="640" height="480" controls muted>
-        <source src="{{ url_for('serve_video', filename=video_name) }}" type="video/mp4">
-        <source src="{{ url_for('serve_video', filename=video_name) }}" type="video/ogg">
+        <source src="{{ url_for('serve_video', filename=data[video_name]['video_name']) }}" type="video/mp4">
+        <source src="{{ url_for('serve_video', filename=data[video_name]['video_name']) }}" type="video/ogg">
 	    Your browser does not support the video tag.
 	</video>
 </body>
