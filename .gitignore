@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+other_videos/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -160,7 +161,7 @@ scripts/.openvino_venv/
 */nncf
 *_openvino_model/
 005-Optimization-with-ApacheTVM/tvm/
-videos_for_testing/
+# videos_for_testing/
 003-Evaluating-models/trained_on_v1/yolov5_runs/*
 003-Evaluating-models/trained_on_v1/yolov7_runs/*
 003-Evaluating-models/trained_on_v1/yolov8_runs/*
