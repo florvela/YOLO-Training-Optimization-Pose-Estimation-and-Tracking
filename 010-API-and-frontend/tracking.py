@@ -41,7 +41,7 @@ from yolox.tracker.byte_tracker import BYTETracker, STrack
 MODEL_NAME = "best"
 base_dir = os.path.dirname(os.getcwd())
 models_dir = os.path.join(base_dir, "002-Training-models/train_results/chosen_models")
-foldername = "model_yolov8_tf_yolov8m_imgsz_640_epochs_100_batch_16_dataset_v2_loss_SGD_lr_01"
+foldername = "model_yolov8_tf_yolov8s_imgsz_800_epochs_60_batch_16_dataset_v2_loss_SGD_lr_01"
 weights_dir = os.path.join(models_dir, foldername, "weights")
 
 
@@ -361,6 +361,7 @@ def process_video_with_detection(video_path, output_directory="static/results", 
 
     print(f"Source video path: {SOURCE_VIDEO_PATH}")
     print(f"Target video path: {TARGET_VIDEO_PATH}")
+    print(f"Method: {method}")
 
     file_path = 'data.json'
     data = read_json_file(file_path)
@@ -368,10 +369,14 @@ def process_video_with_detection(video_path, output_directory="static/results", 
     tracking_data = dict()
 
     tracking_data["optimized"] = False
+    tracking_data["video_name"] = os.path.basename(video_path)
 
     if method == "nearby-hand":
         tracking_data["method"] = "Tracked person with the closest wrist to detected guns"
     elif method == "nearby-hand-ov":
+        tracking_data["method"] = "Tracked person with the closest wrist to detected guns"
+        tracking_data["optimized"] = True
+    elif method == "nearby-hand-q":
         tracking_data["method"] = "Tracked person with the closest wrist to detected guns"
         tracking_data["optimized"] = True
     else:

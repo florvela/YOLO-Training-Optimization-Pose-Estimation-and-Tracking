@@ -152,7 +152,7 @@ config.py
 */notebooks/003-yolov8-optimization/yolov8n_openvino_model/
 scripts/.openvino_venv/
 */ByteTrack/
-*.mp4
+#*.mp4
 *-Evaluating-models/yolov5
 *-Evaluating-models/yolov7
 *-Evaluating-models/yolov8
